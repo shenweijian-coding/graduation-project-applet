@@ -1,0 +1,53 @@
+<view class="container">
+  <!-- banner区域 -->
+<view class="swiper-container">
+  <swiper class="swiper1" indicator-dots="true" indicator-active-color="#fff" autoplay circular>
+    <swiper-item wx:for="{{banners}}" wx:key="id">
+      <image mode="aspectFill" src="{{item.picUrl}}" />
+    </swiper-item>
+  </swiper>
+</view>
+<!-- 金刚区 -->
+<view class="category-container">
+  <view class="category-box flex">
+    <block wx:for="{{categories}}" wx:key="id">
+      <view class="category-column flex" bindtap="getCurPage" data-path="{{item.path}}">
+        <image mode="aspectFill" class="category-imgbox" src="{{item.icon}}"></image>
+        <view class="category-title">{{item.name}}</view>
+      </view>
+    </block>
+  </view>
+</view>
+<!-- 公告区 -->
+<view class="notice-container">
+<block wx:for="{{noticeList}}" wx:key="id">
+  <van-notice-bar background="#FFFFFF" speed="30" mode="link" text="{{ item.title }}">
+    <image slot="left-icon" class="notice-icon" src="../../images/home/notice.png"></image>
+  </van-notice-bar>
+</block>
+</view>
+<!-- 热点区域 -->
+<view class="hot-container">
+  <view style="width:100%" class="flex2">
+    <view>最新发布</view>
+    <view class="flex2 more">更多<van-icon name="arrow"></van-icon></view>
+  </view>
+  <view class="hot-box flex">
+    <view class="hot-item" wx:for="{{2}}">
+      <!-- 头像名称区域 -->
+      <view class="flex2">
+        <view class="flex3">
+          <image class="avator" mode="aspectFill" src="https://img.zcool.cn/community/0193f25f7d886011013e4584a64c96.jpg"></image>
+        <view class="name">猿小申</view>
+        </view>
+        <view class="date">2021-3-9</view>
+      </view>
+      <view class="detail-desc">这里是内容区域这里是内容区域这里是内容区域这里是内容区域这里是内容区域</view>
+      <view class="detail-img flex2">
+        <image class="detail-img-item" mode="widthFix" src="https://img.zcool.cn/community/0079365950c5d9a8012193a39960f3.jpg@80w_80h_1c_1e_1o_100sh.jpg"></image>
+        <image class="detail-img-item" mode="widthFix" src="https://img.zcool.cn/community/0079365950c5d9a8012193a39960f3.jpg@80w_80h_1c_1e_1o_100sh.jpg"></image>
+      </view>
+    </view>
+  </view>
+</view>
+</view>

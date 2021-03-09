@@ -1,0 +1,19 @@
+<!-- 头像区域 -->
+<view class="my-user-info flex">
+<image src="https://img.zcool.cn/community/0193f25f7d886011013e4584a64c96.jpg" mode="" alt="" />
+<view>申伟建</view>
+</view>
+<!-- 菜单区 -->
+<van-cell-group>
+  <van-cell icon="setting-o" title="信息设置" size="large" is-link arrow/>
+</van-cell-group>
+<van-cell-group>
+  <van-cell title="我发布的" icon="add-o" size="large" is-link arrow/>
+  <van-cell title="我点赞的" icon="good-job-o" size="large" is-link arrow/>
+  <van-cell title="我评论的" icon="comment-o" size="large" is-link arrow/>
+</van-cell-group>
+<view class="cut-off"></view>
+<van-cell-group>
+  <van-cell title="广告合作" icon="friends-o" size="large" is-link arrow/>
+  <van-cell title="关于" icon="warning-o" size="large" is-link arrow/>
+</van-cell-group>

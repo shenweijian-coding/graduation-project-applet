@@ -1,0 +1,14 @@
+/**app.wxss**/
+page {
+  /* font-family: monospace; */
+  font-size: 32rpx;          /*微信小程序中，使用rpx做单位*/
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background-color: #fff;
+}
