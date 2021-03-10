@@ -1,2 +1,12 @@
-<!--pages/news/index.wxml-->
-<text>pages/news/index.wxml</text>
+<view class="">
+  <view class="swiper-container">
+  <view class="swiper-title">学校新学期第一周教学秩序井然</view>
+  <swiper class="swiper1">
+    <swiper-item>
+      <a href="">
+        <image mode="aspectFill" src="http://www1.hebeinu.edu.cn/uploads/img1/20210308/6045abe41225b.JPG!300X300.jpg"></image>
+      </a>
+    </swiper-item>
+  </swiper>
+</view>
+</view>

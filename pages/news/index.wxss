@@ -1,1 +1,24 @@
-/* pages/news/index.wxss */
+.swiper-container {
+  width: 750rpx;
+  height: 475rpx;
+  position: relative;
+  z-index: 1;
+}
+.swiper-container .swiper1 {
+  width: 750rpx;
+  height: 475rpx;
+}
+.swiper-container .swiper1 image {
+  width: 750rpx;
+}
+.swiper-title{
+  width: 100%;
+  padding: 0 20rpx;
+  color: #fff;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: rgba(0, 0, 0, .6);
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+}
