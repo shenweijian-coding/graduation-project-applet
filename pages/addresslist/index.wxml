@@ -1,2 +1,36 @@
-<!--pages/addresslist/index.wxml-->
-<text>pages/addresslist/index.wxml</text>
+<view class="container-address">
+
+
+<view>
+  <van-search
+  value="{{  }}"
+  shape="round"
+  placeholder="请输入搜索关键词"
+/>
+</view>
+<!-- 左右栏 -->
+<view class="flex list-con">
+  <!-- 左边栏 -->
+  <view class="left">
+    <scroll-view scroll-y style="height:98%">
+      <block wx:for="{{18}}">
+        <view class="left-item">宿舍</view>
+      </block>
+      </scroll-view>
+  </view>
+  <!-- 右边栏 -->
+  <view class="right">
+    <scroll-view scroll-y style="height:98%">
+      <block wx:for="{{4}}">
+        <view class="right-item">
+          <view class="right-item-title">宿舍</view>
+          <view class="flex phone-list-item" wx:for="{{6}}">
+            <view><view class="phone-item">18832373807</view><view class="item-name">学生宿舍管理服务中心</view></view>
+            <view><van-icon size="24" name="phone-o" /></view>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>
+</view>

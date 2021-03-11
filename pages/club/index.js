@@ -7,7 +7,12 @@ Page({
   data: {
 
   },
-
+  onChange(event) {
+    wx.showToast({
+      title: `切换到标签 ${event.detail.name}`,
+      icon: 'none',
+    });
+  },
   /**
    * 生命周期函数--监听页面加载
    */

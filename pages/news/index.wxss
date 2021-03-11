@@ -22,3 +22,9 @@
   z-index: 2;
   bottom: 0;
 }
+.news-item{
+  padding: 30rpx 20rpx;
+  border-bottom: 1px solid #f7f7f7f7;
+  display: flex;
+  align-items: center;
+}

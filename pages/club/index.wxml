@@ -1,2 +1,17 @@
-<!--pages/club/index.wxml-->
-<text>pages/club/index.wxml</text>
+<van-search value="{{ value }}" placeholder="请输入搜索关键词" />
+<van-tabs active="{{ active }}" bind:change="onChange">
+  <van-tab title="文艺类">
+   <view class="bg">
+    <view class="club-item flex" wx:for="{{6}}">
+        <image mode="widthFix" src="https://img.zcool.cn/community/0079365950c5d9a8012193a39960f3.jpg@80w_80h_1c_1e_1o_100sh.jpg"></image>
+      <view class="right-text">
+        <view class="club-name">苹果科研室</view>
+        <view class="club-info">简介：大号i好的话大苏打很大hi奥迪好多号大红多号多号大红大大苏打大红红</view>
+      </view>
+    </view>
+   </view>
+  </van-tab>
+  <van-tab title="学术科技类"></van-tab>
+  <van-tab title="体育类"></van-tab>
+  <van-tab title="志愿公益类"></van-tab>
+</van-tabs>

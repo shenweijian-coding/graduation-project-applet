@@ -71,6 +71,17 @@
           "pathName": "pages/news/index",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "通讯录",
+          "pathName": "pages/addresslist/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "俱乐部",
+          "pathName": "pages/club/index",
+          "scene": null
         }
       ]
     }

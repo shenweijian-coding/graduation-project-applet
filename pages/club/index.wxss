@@ -1,1 +1,31 @@
-/* pages/club/index.wxss */
+.bg{
+  background-color: #f7f7f7f7;
+  padding: 20rpx;
+}
+.club-item{
+  padding: 30rpx;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+image{
+  width: 30%;
+  flex: 1;
+  border-radius: 10rpx;
+}
+.flex{
+  display: flex;
+}
+.right-text{
+  flex: 2;
+  margin-left: 28rpx;
+}
+.club-info{
+  line-height: 48rpx;
+  color: rgb(136, 136, 136);
+  font-size: 26rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}

@@ -1,4 +1,5 @@
 <view class="">
+  <!-- 顶部banner -->
   <view class="swiper-container">
   <view class="swiper-title">学校新学期第一周教学秩序井然</view>
   <swiper class="swiper1">
@@ -8,5 +9,11 @@
       </a>
     </swiper-item>
   </swiper>
-</view>
+  </view>
+  <!-- 其他模块 -->
+  <view>
+<block wx:for="{{6}}">
+  <view class="news-item"><van-icon class="color:" name="hot-o" />学校党委理论学习中心组开展集中学习活动</view>
+</block>
+  </view>
 </view>
