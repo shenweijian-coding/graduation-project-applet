@@ -10,6 +10,7 @@
     "pages/resell/index",
     "pages/spell/index",
     "pages/lose/index",
+    "pages/lose/issue/index",
     "pages/love/index"
   ],
   "window":{
@@ -52,6 +53,11 @@
     "van-cell-group": "@vant/weapp/cell-group/index",
     "van-search": "@vant/weapp/search/index",
     "van-tab": "@vant/weapp/tab/index",
-    "van-tabs": "@vant/weapp/tabs/index"
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-radio": "@vant/weapp/radio/index",
+    "van-radio-group": "@vant/weapp/radio-group/index",
+    "van-uploader": "@vant/weapp/uploader/index",
+    "my-card":"./component/Card/card"
   }
 }

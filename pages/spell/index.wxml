@@ -1,2 +1,1 @@
-<!--pages/spell/index.wxml-->
-<text>pages/spell/index.wxml</text>
+<my-card />

@@ -1,2 +1,14 @@
-<!--pages/lose/index.wxml-->
-<text>pages/lose/index.wxml</text>
+<!-- 发布模块 -->
+<view class="issue" bindtap="navIssuePage">
+  <view>
+    <view class="issue-icon flex"><van-icon size="22" name="plus" /></view>
+  </view>
+</view>
+<van-tabs color="#1dce7c">
+  <van-tab title="失物">
+    <my-card />
+  </van-tab>
+  <van-tab title="招领">
+    <my-card />
+  </van-tab>
+</van-tabs>

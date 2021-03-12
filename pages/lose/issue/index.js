@@ -1,17 +1,14 @@
-// pages/lose/index.js
+// pages/lose/issue/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    fileList:[],
+    username: ''
+  },
 
-  },
-  navIssuePage(){
-    wx.navigateTo({
-      url: './issue/index',
-    })
-  },
   /**
    * 生命周期函数--监听页面加载
    */

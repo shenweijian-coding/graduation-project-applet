@@ -1,1 +1,19 @@
-/* pages/lose/index.wxss */
+.issue{
+  position: fixed;
+  right: 20rpx;
+  bottom: 100rpx;
+  z-index: 2;
+  /* background-color: red; */
+}
+.issue-icon{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background-color: #00b26a;
+  color: #fff;
+}
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

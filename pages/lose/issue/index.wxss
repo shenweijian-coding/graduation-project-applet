@@ -1,0 +1,21 @@
+.title{
+  color: #000;
+  /* font-size: 34rpx; */
+}
+.pad{
+  padding: 20rpx 30rpx;
+}
+.flex{
+  display: flex;
+}
+.pad textarea{
+  width: 94%;
+  padding: 20rpx;
+  background-color: #f7f7f7f7;
+}
+.issue-btn{
+  background-color: #00b26a;
+  color: #fff;
+  width: 90%;
+  margin-top: 50rpx;
+}
