@@ -3,6 +3,7 @@
     "pages/index/index",
     "pages/discovery/index",
     "pages/my/index",
+    "pages/my/setting/index",
     "pages/news/index",
     "pages/addresslist/index",
     "pages/club/index",

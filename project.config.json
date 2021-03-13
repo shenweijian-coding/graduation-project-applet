@@ -6,7 +6,7 @@
   "setting": {
     "urlCheck": false,
     "es6": true,
-    "enhance": false,
+    "enhance": true,
     "postcss": true,
     "preloadBackgroundData": false,
     "minified": true,
@@ -41,7 +41,7 @@
   },
   "compileType": "miniprogram",
   "libVersion": "2.15.0",
-  "appid": "wxf2d397798e171ba4",
+  "appid": "wx3108a2c687df76f6",
   "projectname": "graduation-project-applet",
   "debugOptions": {
     "hidedInDevtools": []
@@ -111,6 +111,12 @@
         {
           "name": "表白墙",
           "pathName": "pages/love/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "信息设置",
+          "pathName": "pages/my/setting/index",
           "scene": null
         }
       ]

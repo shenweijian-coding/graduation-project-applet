@@ -1,0 +1,50 @@
+
+  <van-field
+    label="你的姓名"
+        size="large"
+    value="{{ userInfo.name }}"
+    placeholder="请输入姓名"
+    data-type="name"
+    bind:change="onChange"
+  />
+  <van-field
+    label="你的学院"
+        size="large"
+    value="{{ userInfo.college }}"
+    placeholder="请输入你的学院"
+    data-type="college"
+    bind:change="onChange"
+  />
+    <van-field
+    label="你的专业"
+        size="large"
+    value="{{ userInfo.major }}"
+    placeholder="请输入你的专业"
+    data-type="major"
+    bind:change="onChange"
+  />
+  <van-field
+    label="你的年级"
+        size="large"
+    value="{{ userInfo.grade }}"
+    placeholder="请输入你的年级(如大二)"
+    data-type="grade"
+    bind:change="onChange"
+  />
+    <van-field
+    label="你的邮箱"
+    size="large"
+    value="{{ userInfo.email }}"
+    placeholder="请输入你的邮箱"
+    data-type="email"
+    bind:change="onChange"
+  />
+  <van-field
+    label="微信号"
+        size="large"
+    value="{{ userInfo.wxName }}"
+    placeholder="请输入你的微信号"
+    data-type="wxName"
+    bind:change="onChange"
+  />
+  <button class="submit-btn" bindtap="submitUserInfo">提交信息</button>
