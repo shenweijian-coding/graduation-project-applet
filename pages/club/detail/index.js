@@ -5,18 +5,18 @@ Page({
    * 页面的初始数据
    */
   data: {
-    banners:[
-      {
-        picUrl: 'https://img.zcool.cn/community/01746e604b3f7e11013e87f4ea3e63.jpg@260w_195h_1c_1e_1o_100sh.jpg'
-      }
-    ],
+    clubInfo: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    const curClubInfo = JSON.parse(options.detailInfo)
+    wx.setNavigationBarTitle({
+      title: curClubInfo.title,
+    })
+    this.setData({ clubInfo:curClubInfo })
   },
 
   /**

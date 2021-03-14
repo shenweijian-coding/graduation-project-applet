@@ -1,17 +1,59 @@
 <van-search value="{{ value }}" placeholder="请输入搜索关键词" />
-<van-tabs active="{{ active }}" bind:change="onChange">
-  <van-tab title="文艺类">
+<van-tabs active="{{ active }}" bind:change="changeClubType">
+  <van-tab name="A" title="文艺类">
    <view class="bg">
-    <view class="club-item flex" wx:for="{{6}}" wx:key="index" bindtap="navToetail">
-        <image mode="widthFix" src="https://img.zcool.cn/community/0079365950c5d9a8012193a39960f3.jpg@80w_80h_1c_1e_1o_100sh.jpg"></image>
+    <view class="club-item flex" wx:for="{{clubListA}}" wx:key="index" data-item="{{item}}" bindtap="navToetail">
+        <image mode="widthFix" src="{{item.clubLogo}}"></image>
       <view class="right-text">
-        <view class="club-name">苹果科研室</view>
-        <view class="club-info">简介：大号i好的话大苏打很大hi奥迪好多号大红多号多号大红大大苏打大红红</view>
+        <view class="club-name">{{item.title}}</view>
+        <view class="club-info">简介{{item.desc}}</view>
+        <view class="club-tag">
+          <view wx:for="{{item.tag}}" wx:key="index" class="tag-item">{{item}}</view>
+        </view>
       </view>
     </view>
    </view>
   </van-tab>
-  <van-tab title="学术科技类"></van-tab>
-  <van-tab title="体育类"></van-tab>
-  <van-tab title="志愿公益类"></van-tab>
+  <van-tab name="B" title="学术科技类">
+    <view class="bg">
+    <view class="club-item flex" wx:for="{{clubListA}}" wx:key="index" data-item="{{item}}" bindtap="navToetail">
+        <image mode="widthFix" src="{{item.clubLogo}}"></image>
+      <view class="right-text">
+        <view class="club-name">{{item.title}}</view>
+        <view class="club-info">简介{{item.desc}}</view>
+        <view class="club-tag">
+          <view wx:for="{{item.tag}}" wx:key="index" class="tag-item">{{item}}</view>
+        </view>
+      </view>
+    </view>
+   </view>
+  </van-tab>
+  <van-tab name="C" title="体育类">
+    <view class="bg">
+    <view class="club-item flex" wx:for="{{clubListA}}" wx:key="index" data-item="{{item}}" bindtap="navToetail">
+        <image mode="widthFix" src="{{item.clubLogo}}"></image>
+      <view class="right-text">
+        <view class="club-name">{{item.title}}</view>
+        <view class="club-info">简介{{item.desc}}</view>
+        <view class="club-tag">
+          <view wx:for="{{item.tag}}" wx:key="index" class="tag-item">{{item}}</view>
+        </view>
+      </view>
+    </view>
+   </view>
+  </van-tab>
+  <van-tab name="D" title="志愿公益类">
+    <view class="bg">
+    <view class="club-item flex" wx:for="{{clubListA}}" wx:key="index" data-item="{{item}}" bindtap="navToetail">
+        <image mode="widthFix" src="{{item.clubLogo}}"></image>
+      <view class="right-text">
+        <view class="club-name">{{item.title}}</view>
+        <view class="club-info">简介{{item.desc}}</view>
+        <view class="club-tag">
+          <view wx:for="{{item.tag}}" wx:key="index" class="tag-item">{{item}}</view>
+        </view>
+      </view>
+    </view>
+   </view>
+  </van-tab>
 </van-tabs>

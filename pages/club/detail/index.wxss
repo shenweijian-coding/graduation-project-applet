@@ -8,7 +8,7 @@
   width: 750rpx;
   height: 300rpx;
 }
-.swiper-container .swiper1 image {
+.swiper-container  image {
   width: 750rpx;
   height: 300rpx;
 }

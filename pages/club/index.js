@@ -1,31 +1,45 @@
 // pages/club/index.js
+import request from '../../utils/request'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    active: 'A',
+    clubListA: [],
+    clubListB: [],
+    clubListC: [],
+    clubListD: [],
   },
-  onChange(event) {
-    wx.showToast({
-      title: `切换到标签 ${event.detail.name}`,
-      icon: 'none',
-    });
+  // tab切换
+  changeClubType(e) {
+    this.setData({ active: e.detail.name})
+    // 先判断是否data有数据 没有则请求
+    if(this.data["clubList"+e.detail.name].length) return
+    // 请求数据
+    this.getClubInfo(e.detail.name)
   },
   // 导航到详情
-  navToetail(){
+  navToetail(e) {
+    console.log(e);
     wx.navigateTo({
-      url: './detail/index',
+      url: './detail/index?detailInfo=' + JSON.stringify(e.currentTarget.dataset.item),
     })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getClubInfo()
   },
-
+  async getClubInfo(type = "A"){
+    const clubInfo = await request({
+      url: `/api/getClubInfo?type=${type}`
+    })
+    this.setData({ ["clubList"+type]: clubInfo.data })
+    console.log(clubInfo);
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
