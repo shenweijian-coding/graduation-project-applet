@@ -2,7 +2,7 @@
 <van-tabs active="{{ active }}" bind:change="onChange">
   <van-tab title="文艺类">
    <view class="bg">
-    <view class="club-item flex" wx:for="{{6}}">
+    <view class="club-item flex" wx:for="{{6}}" wx:key="index" bindtap="navToetail">
         <image mode="widthFix" src="https://img.zcool.cn/community/0079365950c5d9a8012193a39960f3.jpg@80w_80h_1c_1e_1o_100sh.jpg"></image>
       <view class="right-text">
         <view class="club-name">苹果科研室</view>

@@ -7,6 +7,7 @@
     "pages/news/index",
     "pages/addresslist/index",
     "pages/club/index",
+    "pages/club/detail/index",
     "pages/calendar/index",
     "pages/resell/index",
     "pages/spell/index",

@@ -1,24 +1,17 @@
-// pages/club/index.js
+// pages/club/detail/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    banners:[
+      {
+        picUrl: 'https://img.zcool.cn/community/01746e604b3f7e11013e87f4ea3e63.jpg@260w_195h_1c_1e_1o_100sh.jpg'
+      }
+    ],
+  },
 
-  },
-  onChange(event) {
-    wx.showToast({
-      title: `切换到标签 ${event.detail.name}`,
-      icon: 'none',
-    });
-  },
-  // 导航到详情
-  navToetail(){
-    wx.navigateTo({
-      url: './detail/index',
-    })
-  },
   /**
    * 生命周期函数--监听页面加载
    */

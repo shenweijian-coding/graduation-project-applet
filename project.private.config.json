@@ -1,0 +1,82 @@
+{
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "我的",
+          "pathName": "pages/my/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "新闻",
+          "pathName": "pages/news/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "通讯录",
+          "pathName": "pages/addresslist/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "俱乐部",
+          "pathName": "pages/club/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "交易",
+          "pathName": "pages/resell/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "拼一拼",
+          "pathName": "pages/spell/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "失物招领",
+          "pathName": "pages/lose/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "发布模块",
+          "pathName": "pages/lose/issue/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "表白墙",
+          "pathName": "pages/love/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "信息设置",
+          "pathName": "pages/my/setting/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "社团详情",
+          "pathName": "pages/club/detail/index",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

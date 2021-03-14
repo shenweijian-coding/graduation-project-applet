@@ -1,0 +1,47 @@
+<!-- 图片区域 -->
+<view class="swiper-container">
+  <swiper class="swiper1" indicator-dots="true" indicator-active-color="#fff" autoplay circular>
+    <swiper-item wx:for="{{banners}}" wx:key="id">
+      <image mode="aspectFill" src="{{item.picUrl}}" />
+    </swiper-item>
+  </swiper>
+</view>
+<!-- 社团详情部分 -->
+<view class="club-box">
+  <view class="pad">
+  <view class="flex">
+  <!-- 左边 -->
+  <view class="club-main">
+    <view class="club-name">苹果科研室</view>
+    <view class="club-mem">成员 101</view>
+    <view class="club-tag flex">
+      <view class="tag-item">学习</view>
+      <view class="tag-item">安卓开发</view>
+      <view class="tag-item">ios开发</view>
+      <view class="tag-item">机器学习</view>
+      <view class="tag-item">UI设计</view>
+      <view class="tag-item">PHP开发</view>
+    </view>
+  </view>
+  <!-- 右边 -->
+  <view class="club-logo">
+    <image src="https://img.zcool.cn/community/0184b25c414348a801203d2279e27d.jpg@80w_80h_1c_1e_1o_100sh.jpg"></image>
+  </view>
+</view>
+<!-- 简介 -->
+<view class="club-desc">
+  小程序提供了一个简单、高效的应用开发框架和丰富的组件及API，帮助开发者在微信中开发具有原生 APP 体验的服务。
+本章分主题的介绍了小程序的开发语言、框架、能力、调试等内容，帮助开发者快速全面的了解小程序开发的方方面面。
+想要更具体了解关于框架、组件、API的详细内容，请参考对应的参考文档：
+</view>
+  </view>
+  <view class="line"></view>
+  <!-- 社团活动照片 -->
+  <view class="pad">
+    <view>社团活动照片</view>
+    <view class="club-img">
+      <image src="https://reviveimg.hellorf.com/www/images/6482a0b808d1574a98280390a7a450af.jpg" ></image>
+      <image src="https://reviveimg.hellorf.com/www/images/6482a0b808d1574a98280390a7a450af.jpg" ></image>
+    </view>
+  </view>
+</view>
