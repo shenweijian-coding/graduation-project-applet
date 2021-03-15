@@ -17,10 +17,10 @@
     </view>
     <view class="line"></view>
     <!-- 评论 -->
-    <view class="flex">
-      <view class="flex"><van-icon size="20" name="share-o" />转发</view>
-      <view class="flex"><van-icon size="20" name="comment-o" />3</view>
-      <view class="flex"><van-icon size="20" name="thumb-circle-o" />3</view>
+    <view class="flex" style="padding:0 40rpx">
+      <view class="flex"><van-icon size="18" name="share-o"/><view class="bottom-con">转发</view></view>
+      <view class="flex"><van-icon size="18" name="chat-o" /><view class="bottom-con">123</view></view>
+      <view class="flex"><van-icon size="18" name="good-job-o" /><view class="bottom-con">212</view></view>
     </view>
   </view>
   <view class="item-bottom"></view>

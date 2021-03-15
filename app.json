@@ -10,10 +10,13 @@
     "pages/club/detail/index",
     "pages/calendar/index",
     "pages/resell/index",
+    "pages/resell/issue/index",
+    "pages/resell/detail/index",
     "pages/spell/index",
     "pages/lose/index",
     "pages/lose/issue/index",
-    "pages/love/index"
+    "pages/love/index",
+    "pages/login/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -60,6 +63,8 @@
     "van-radio": "@vant/weapp/radio/index",
     "van-radio-group": "@vant/weapp/radio-group/index",
     "van-uploader": "@vant/weapp/uploader/index",
-    "my-card":"./component/Card/card"
+    "van-switch": "@vant/weapp/switch/index",
+    "my-card":"./component/Card/card",
+    "my-issue": "./component/Issue/issue"
   }
 }

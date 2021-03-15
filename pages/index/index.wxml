@@ -51,3 +51,6 @@
   </view>
 </view>
 </view>
+
+<!-- 登录弹窗 -->
+<my-login />

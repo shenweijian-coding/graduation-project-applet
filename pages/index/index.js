@@ -66,4 +66,12 @@ Page({
   onLoad() {
 
   },
+  onShow() {
+    const userInfo = wx.getStorageSync('userInfo')
+    if(!userInfo){
+      wx.navigateTo({
+        url: '../login/index',
+      })
+    }
+  }
 })

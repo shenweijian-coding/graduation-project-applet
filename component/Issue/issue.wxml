@@ -1,0 +1,6 @@
+<!-- 发布模块 -->
+<view class="issue" bindtap="navIssuePage">
+  <view>
+    <view class="issue-icon flex"><van-icon size="22" name="plus" /></view>
+  </view>
+</view>

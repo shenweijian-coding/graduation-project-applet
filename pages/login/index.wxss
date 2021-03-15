@@ -1,0 +1,14 @@
+button{
+  width: 90%;
+  margin-top: 30rpx;
+}
+image{
+  width: 20%;
+  border-radius: 50%;
+  margin: 40% 0 30rpx 0;
+}
+.flex{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

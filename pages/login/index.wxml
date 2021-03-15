@@ -1,0 +1,5 @@
+<view class="flex">
+  <image mode="widthFix" src="https://wx.qlogo.cn/mmhead/Q3auHgzwzM50NwdS4a0OaQpw42e7U44h0jdg6KVWrCJiamzicDwKCicrA/0"></image>
+  <view>北院校园通</view>
+  <button open-type="getUserInfo" bindtap="login" type="primary">微信授权登录</button>
+</view>

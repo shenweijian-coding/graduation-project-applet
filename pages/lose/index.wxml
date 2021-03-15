@@ -1,9 +1,4 @@
-<!-- 发布模块 -->
-<view class="issue" bindtap="navIssuePage">
-  <view>
-    <view class="issue-icon flex"><van-icon size="22" name="plus" /></view>
-  </view>
-</view>
+<my-issue />
 <van-tabs color="#1dce7c">
   <van-tab title="失物">
     <my-card />

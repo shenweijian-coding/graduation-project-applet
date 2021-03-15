@@ -1,7 +1,7 @@
 // app.js
 App({
   globalData: {
-    domain: 'http://127.0.0.1:3000',
+    domain: 'http://192.168.0.107:3000',
     openid: '',
     userInfo: null
   },

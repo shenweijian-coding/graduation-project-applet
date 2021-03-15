@@ -28,6 +28,9 @@ Page({
         return
       }
     }
+    // 加入头像和性别
+    userInfo.avatar = globalData.userInfo.avatarUrl
+    userInfo.gender = globalData.userInfo.gender
     const res = await request({
       url: '/api/addUserInfo',
       method: 'POST',
@@ -57,10 +60,7 @@ Page({
       url: '/api/getUserInfo'
     })
     if(res.erron!==0) {
-      wx.showToast({
-        title: res.message,
-        icon: 'none'
-      })
+      return
     }
     this.setData({
       userInfo: { ...res.data.contactWay, ...res.data.schoolInfo  }
