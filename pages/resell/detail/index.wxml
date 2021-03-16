@@ -3,65 +3,65 @@
   <view class="flex">
     <view class="flex">
       <image class="avator" mode="widthFix"
-        src="https://thirdwx.qlogo.cn/mmopen/vi_32/rqeaqXOa35mZI2iata3FqwC3PkRnkTo0tP7Lh6icvicsIBwibk4iaahd5jluP2LYA9vWywBiaS7sX6gyCIicibCP6ptibbQ/132">
+        src="{{curTradeInfo.userInfo.avatarUrl}}">
       </image>
       <view>
         <view class="flex3">
-          <view>申伟建</view>
-          <view wx:if="{{item.userInfo.gender}}" class="gender-1 iconfont icon-nv"></view>
+          <view>{{curTradeInfo.userInfo.name}}</view>
+          <view wx:if="{{curTradeInfo.userInfo.gender}}" class="gender-1 iconfont icon-nv"></view>
           <view wx:else class="gender-0 iconfont icon-nan"></view>
         </view>
-        <view class="time">2021-9-10 12:30</view>
+        <view class="time">{{curTradeInfo.createTime}}</view>
       </view>
     </view>
     <view>
-      <view class="price">￥{{18}}</view>
-      <view class="tag" wx:if="{{item.isNew}}">95新</view>
+      <view class="price">￥{{curTradeInfo.price}}</view>
+      <view class="tag" wx:if="{{curTradeInfo.isNew}}">95新</view>
     </view>
   </view>
-  <view class="info">这里是描述信息</view>
+  <view class="info">{{curTradeInfo.desc}}</view>
   <view class="img flex">
-    <!-- <block wx:for="{{item.img}}"> -->
+    <block wx:for="{{curTradeInfo.img}}" wx:key="index">
     <image mode="widthFix"
-      src="https://img.zcool.cn/community/01a6a0604e35d811013fb117ebecbc.jpg@260w_195h_1c_1e_1o_100sh.jpg"></image>
-    <image mode="widthFix"
-      src="https://img.zcool.cn/community/01a6a0604e35d811013fb117ebecbc.jpg@260w_195h_1c_1e_1o_100sh.jpg"></image>
-    <!-- </block> -->
+      src="{{item}}"></image>
+    </block>
   </view>
 </view>
 <view class="line"></view>
 <!-- 评论列表 -->
 <view class="comment-title pad">相关评论</view>
-<block wx:for="{{6}}">
+<view style="margin-bottom:100rpx;">
+  <block wx:for="{{commentList}}" wx:key="index">
   <view class="pad">
   <view class="flex">
     <view class="flex">
       <image class="avator" mode="widthFix"
-        src="https://thirdwx.qlogo.cn/mmopen/vi_32/rqeaqXOa35mZI2iata3FqwC3PkRnkTo0tP7Lh6icvicsIBwibk4iaahd5jluP2LYA9vWywBiaS7sX6gyCIicibCP6ptibbQ/132">
+        src="{{item.avatarUrl}}">
       </image>
       <view>
         <view class="flex3">
-          <view>申伟建</view>
-          <view wx:if="{{item.userInfo.gender}}" class="gender-1 iconfont icon-nv"></view>
+          <view>{{item.name}}</view>
+          <view wx:if="{{item.gender}}" class="gender-1 iconfont icon-nv"></view>
           <view wx:else class="gender-0 iconfont icon-nan"></view>
         </view>
-        <view class="time">2021-9-10 12:30</view>
+        <view class="time">{{item.createTime}}</view>
       </view>
     </view>
   </view>
-  <view class="info">这里是描述信息</view>
+  <view class="info">{{item.desc}}</view>
   </view>
   <view class="comment-line"></view>
 </block>
+</view>
 <!-- 评论模块 -->
-<view class="comment">
+  <view class="comment">
   <van-field
-    value="{{ value }}"
+    value="{{ comment }}"
     placeholder="发表友善的评论"
     border="{{ true }}"
-    bind:change="onChange"
+    bind:change="changeComment"
   >
-  <van-button round color="#f45670" slot="button" size="small">
+  <van-button round color="#f45670" slot="button" size="small" bindtap="submit">
       评论
     </van-button>
 </van-field>>

@@ -1,7 +1,7 @@
 <view class="con-bg">
   <block wx:for="{{data}}">
   <view class="item">
-    <view bindtap="navToDetail">
+    <view data-item="{{item}}" bindtap="navToDetail">
     <view class="flex">
     <view class="flex">
       <image class="avator" mode="widthFix" src="{{item.userInfo.avatarUrl}}"></image>
@@ -30,7 +30,7 @@
     <!-- 评论 -->
     <view class="flex" style="padding:0 40rpx">
       <view class="flex"><van-icon size="18" name="share-o"/><view class="bottom-con">转发</view></view>
-      <view class="flex"><van-icon size="18" name="chat-o" /><view class="bottom-con" bindtap="navToDetail">{{item.disNum}}</view></view>
+      <view data-item="{{item}}" bindtap="navToDetail" class="flex"><van-icon size="18" name="chat-o" /><view class="bottom-con" >{{item.disNum}}</view></view>
       <view class="flex"><van-icon size="18" name="good-job-o" /><view class="bottom-con">{{item.likeNum}}</view></view>
     </view>
   </view>

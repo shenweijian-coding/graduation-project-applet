@@ -22,9 +22,10 @@ Component({
    */
   methods: {
     // 导航到详情
-    navToDetail(){
+    navToDetail(e){
+      console.log(e);
       wx.navigateTo({
-        url: './detail/index',
+        url: `./detail/index?data=${JSON.stringify(e.currentTarget.dataset.item)}`,
       })
     }
   }

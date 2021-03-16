@@ -6,6 +6,7 @@ App({
     userInfo: null
   },
   onLaunch() {
+    console.log('小程序执行');
     // 登录获取code及 openid
     this.checkSession()
     // 缓存取出用户数据
