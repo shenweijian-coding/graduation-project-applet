@@ -4,7 +4,10 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    data:{
+      type:[],
+      value: ''
+    }
   },
 
   /**
@@ -18,6 +21,11 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    // 导航到详情
+    navToDetail(){
+      wx.navigateTo({
+        url: './detail/index',
+      })
+    }
   }
 })

@@ -1,2 +1,2 @@
-<my-card />
+<my-card data="{{resellInfo}}"/>
 <my-issue navPath="./issue/index"/>

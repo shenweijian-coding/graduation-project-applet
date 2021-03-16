@@ -1,1 +1,4 @@
-/* pages/resell/detail/index.wxss */
+@import '../../../style/public.wxss';
+.comment-title{
+  color: #bcbcbc;
+}

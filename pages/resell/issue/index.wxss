@@ -24,6 +24,9 @@ textarea{
   justify-content: center;
   align-items: center;
 }
-.issue-img{
-  /* text-align: center; */
+button{
+  width: 90%;
+  color: #fff;
+  margin-top: 60rpx;
+  background-color: #f45670;
 }

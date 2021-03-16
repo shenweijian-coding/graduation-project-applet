@@ -9,7 +9,7 @@
   width: 100rpx;
   height: 100rpx;
   border-radius: 50%;
-  background-color: #3dbeff;
+  background-color: #f45670;
   color: #fff;
 }
 

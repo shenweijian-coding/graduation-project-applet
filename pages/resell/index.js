@@ -1,11 +1,12 @@
 // pages/resell/index.js
+import request from '../../utils/request'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    resellInfo:[]
   },
 
   /**
@@ -14,7 +15,15 @@ Page({
   onLoad: function (options) {
 
   },
-
+  async getResellInfo(){
+    const res = await request({
+      url:'/api/getResellInfo'
+    })
+    const resellInfo = res.data.reverse()
+    this.setData({
+      resellInfo
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -26,7 +35,8 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+        // 请求交易物品相关信息
+        this.getResellInfo()
   },
 
   /**

@@ -1,36 +1,22 @@
-
-  <view class="pad">
-    <view class="issue-title">为你的宝贝添加介绍吧</view>
-    <view>
-      <textarea name="" id="" cols="30" rows="10" placeholder="描述下你的宝贝，有故事的宝贝更容易卖出哦"></textarea>
-    </view>
+<view class="pad">
+  <view class="issue-title">为你的宝贝添加介绍吧</view>
+  <view>
+    <textarea bindinput="getDesc" value="{{desc}}" name="" id="" cols="30" rows="10" placeholder="描述下你的宝贝，有故事的宝贝更容易卖出哦"></textarea>
   </view>
+</view>
 
 <!-- 添加照片 -->
 <view class="pad issue-img">
-  <van-uploader file-list="{{ fileList }}" />
+  <van-uploader accept="image" max-count="{{2}}" file-list="{{ fileList }}" bind:after-read="afterRead"/>
   <!-- <view>添加照片</view> -->
 </view>
 <view class="line"></view>
 <van-cell size="large" title="是否全新">
-  <van-switch checked="{{ checked }}" bind:change="onChange" />
+  <van-switch checked="{{ checked }}" active-color="#f45670" bind:change="onChange" />
 </van-cell>
 <view class="line"></view>
-<van-field
-    size="large"
-    value="{{ value }}"
-    placeholder="请输入价格"
-    label="价格"
-    border="{{ true }}"
-    bind:change="onChange"
-    input-align="right"
-  />
-  <van-field
-    size="large"
-    value="{{ value }}"
-    placeholder="请输入价格"
-    label="分类"
-    border="{{ true }}"
-    bind:change="onChange"
-    input-align="right"
-  />
+<van-field size="large" value="{{ price }}" placeholder="请输入价格" label="价格(元)" border="{{ true }}" bind:change="changePrice"
+  input-align="right" />
+<van-field size="large" value="{{ type }}" placeholder="请输入价格" label="分类" border="{{ true }}" bind:change="onChange"
+  input-align="right" />
+  <button bindtap="submit">确认发布</button>

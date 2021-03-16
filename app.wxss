@@ -1,4 +1,5 @@
 /**app.wxss**/
+@import './style/iconfont.wxss';
 page {
   /* font-family: monospace; */
   font-size: 32rpx;          /*微信小程序中，使用rpx做单位*/

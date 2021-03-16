@@ -29,7 +29,7 @@ Page({
       }
     }
     // 加入头像和性别
-    userInfo.avatar = globalData.userInfo.avatarUrl
+    userInfo.avatarUrl = globalData.userInfo.avatarUrl
     userInfo.gender = globalData.userInfo.gender
     const res = await request({
       url: '/api/addUserInfo',

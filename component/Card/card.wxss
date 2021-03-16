@@ -1,7 +1,4 @@
-.con-bg{
-  /* background-color: red; */
-  /* padding: 10rpx; */
-}
+@import '../../style/iconfont.wxss';
 .item{
   padding: 30rpx 30rpx 20rpx 30rpx;
 }
@@ -14,7 +11,7 @@
 }
 .info{
   margin: 20rpx 0;
-  font-size: 26rpx;
+  font-size: 28rpx;
 }
 .flex{
   display: flex;
@@ -25,8 +22,14 @@
   display: flex;
   justify-content: space-evenly;
 }
+.flex3{
+  display: flex;
+  align-items: center;
+  /* justify-content: space-evenly; */
+}
 .img image{
-  width: 40%;
+  width: 49%;
+  /* height: 40%; */
   border-radius: 10rpx;
 }
 .line{
@@ -49,4 +52,24 @@
   font-size: 28rpx;
   color: #6b6b6bf7;
   margin-left: 4rpx;
+}
+.iconfont{
+  font-size: 24rpx;
+  margin-left: 20rpx;
+
+}
+.gender-1{
+
+  color: pink;
+}
+.gender-0{
+  color: #3dbeff;
+}
+.tag{
+  background-color: #ffe1e1;
+  line-height: 42rpx;
+  text-align: center;
+  font-size: 26rpx;
+  color: #b00041;
+  border-radius: 10rpx;
 }

@@ -1,26 +1,37 @@
 <view class="con-bg">
-  <block wx:for="{{4}}">
+  <block wx:for="{{data}}">
   <view class="item">
+    <view bindtap="navToDetail">
     <view class="flex">
     <view class="flex">
-      <image class="avator" mode="widthFix" src="https://img.zcool.cn/community/0193f25f7d886011013e4584a64c96.jpg"></image>
+      <image class="avator" mode="widthFix" src="{{item.userInfo.avatarUrl}}"></image>
       <view>
-        <view>申伟建</view>
-      <view class="time">2021-3-1</view>
+        <view class="flex3">
+          <view>{{item.userInfo.name}}</view>
+          <view wx:if="{{item.userInfo.gender}}" class="gender-1 iconfont icon-nv"></view>
+          <view wx:else class="gender-0 iconfont icon-nan"></view>
+        </view>
+        <view class="time">{{item.createTime}}</view>
       </view>
     </view>
-    <view class="price">￥19</view>
+    <view>
+      <view class="price">￥{{item.price}}</view>
+      <view class="tag" wx:if="{{item.isNew}}">95新</view>
     </view>
-    <view class="info">这里是文章内容，这里是文章内容，这里是文章内容</view>
-    <view class="img">
-      <image mode="widthFix" src="https://img.zcool.cn/community/0079365950c5d9a8012193a39960f3.jpg@80w_80h_1c_1e_1o_100sh.jpg"></image>
+    </view>
+    <view class="info">{{item.desc}}</view>
+    <view class="img flex">
+      <block wx:for="{{item.img}}">
+        <image mode="widthFix" src="{{item}}"></image>
+      </block>
+    </view>
     </view>
     <view class="line"></view>
     <!-- 评论 -->
     <view class="flex" style="padding:0 40rpx">
       <view class="flex"><van-icon size="18" name="share-o"/><view class="bottom-con">转发</view></view>
-      <view class="flex"><van-icon size="18" name="chat-o" /><view class="bottom-con">123</view></view>
-      <view class="flex"><van-icon size="18" name="good-job-o" /><view class="bottom-con">212</view></view>
+      <view class="flex"><van-icon size="18" name="chat-o" /><view class="bottom-con" bindtap="navToDetail">{{item.disNum}}</view></view>
+      <view class="flex"><van-icon size="18" name="good-job-o" /><view class="bottom-con">{{item.likeNum}}</view></view>
     </view>
   </view>
   <view class="item-bottom"></view>
