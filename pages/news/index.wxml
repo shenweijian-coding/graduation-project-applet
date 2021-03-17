@@ -1,19 +1,25 @@
 <view class="">
   <!-- 顶部banner -->
   <view class="swiper-container">
-  <view class="swiper-title">学校新学期第一周教学秩序井然</view>
+  <view class="swiper-title ellipsis">{{recNews.title}}</view>
   <swiper class="swiper1">
     <swiper-item>
       <a href="">
-        <image mode="aspectFill" src="http://www1.hebeinu.edu.cn/uploads/img1/20210308/6045abe41225b.JPG!300X300.jpg"></image>
+        <image mode="aspectFill" src="{{recNews.imgUrl}}"></image>
       </a>
     </swiper-item>
   </swiper>
   </view>
   <!-- 其他模块 -->
   <view>
-<block wx:for="{{6}}">
-  <view class="news-item"><van-icon class="color:" name="hot-o" />学校党委理论学习中心组开展集中学习活动</view>
+<block wx:for="{{newsList}}" class="flex" wx:key="index">
+  <view class="news-item flex">
+    <van-icon style="color:#6dc9f7;" name="hot-o" />
+    <view class="item-title ellipsis">
+      {{item.title}}
+    </view>
+    <view class="time">{{item.time}}</view>
+  </view>
 </block>
   </view>
 </view>

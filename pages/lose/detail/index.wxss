@@ -1,0 +1,47 @@
+@import '../../../style/iconfont.wxss';
+.con{
+  padding: 60rpx;
+}
+.flex{
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+}
+.avator{
+  width: 80rpx;
+  border-radius: 50%;
+  border: 1px solid #f7f7f7f7;
+  margin-right: 20rpx;
+}
+.flex3{
+  display: flex;
+  align-items: center;
+  /* justify-content: space-evenly; */
+}
+.gender-1{
+
+  color: pink;
+}
+.gender-0{
+  color: #3dbeff;
+}
+.iconfont{
+  font-size: 24rpx;
+  margin-left: 20rpx;
+
+}
+.lose-info{
+  margin: 40rpx 0;
+  line-height: 60rpx;
+}
+.lose-img image{
+  border-radius: 10rpx;
+  width: 100%;
+}
+button{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #f45670;
+  color: #fff;
+}

@@ -1,35 +1,43 @@
 <!-- 角色选择 -->
-<van-radio-group value="{{ radio }}" bind:change="onChange">
+<van-radio-group value="{{ role }}" bind:change="onChange">
   <van-cell-group>
-    <van-cell title="您的角色" clickable data-name="1" bind:click="onClick">
-      <van-radio slot="right-icon" name="1">失物</van-radio>
-      <van-radio style="margin-left:40rpx" slot="right-icon" name="2">招领</van-radio>
+    <van-cell title="您的角色" required clickable data-name="1" bind:click="onClick">
+      <van-radio checked-color='#f45670' slot="right-icon" name="1">失物</van-radio>
+      <van-radio checked-color='#f45670' style="margin-left:40rpx" slot="right-icon" name="2">招领</van-radio>
     </van-cell>
+    <van-field value="{{ title }}" clearable required label="标题" size="large" bind:change="changeTitle"
+      input-align="right" placeholder="请输入标题(如 手机)" />
+      <van-field value="{{ time }}" clearable  required label="时间" size="large" bind:change="changeTime"
+      input-align="right" placeholder="丢失或拾到时间" />
   </van-cell-group>
 </van-radio-group>
 <!-- 发布物品信息 -->
-<van-cell title="物品信息"></van-cell>
-<view class="pad">
-  <textarea name="" id="" cols="30" rows="10" placeholder-style="font-size:26rpx" placeholder="请输入您的物品信息"></textarea>
+<van-field value="{{ keyWord }}" center clearable required bind:change="changeKeyWord" label="关键词描述" placeholder="关键词描述"
+  border="{{ true }}" use-button-slot>
+  <van-button slot="button" size="mini" color="#f45670" bindtap="addKeyWord">
+    添加
+  </van-button>
+</van-field>
+<!-- 关键词描述 -->
+<view>
+  <view class="pad" wx:if="{{keyWordList.length}}">
+    <block wx:for="{{keyWordList}}" wx:key="index">
+      <view class="tag">{{item}}</view>
+    </block>
+  </view>
+  <view wx:else class="pad">
+    如<view class="tag">蓝色的</view>
+  </view>
 </view>
 <!-- 物品相关照片 -->
 <van-cell title="物品相关照片"></van-cell>
 <view class="pad">
-  <van-uploader file-list="{{ fileList }}" />
+  <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" />
 </view>
+<!-- 酬金 -->
+<van-field value="{{ reward }}" required clearable label="酬金" bind:change="changeReward" placeholder="酬金(非必填)"
+  input-align="right" />
 <!-- 联系人 -->
-<van-field
-  value="{{ username }}"
-  clearable
-  label="手机号"
-  placeholder="请输入手机号"
-/>
-<!-- 微信号 -->
-<van-field
-  value="{{ username }}"
-  required
-  clearable
-  label="微信号"
-  placeholder="请输入微信号"
-/>
-<button class="issue-btn">立即发布</button>
+<van-field value="{{ phone }}" required clearable label="手机号" bind:change="changePhone" placeholder="请输入手机号"
+  input-align="right" />
+<button class="issue-btn" bindtap="submit">立即发布</button>

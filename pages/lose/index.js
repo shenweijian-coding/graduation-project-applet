@@ -12,6 +12,11 @@ Page({
       url: './issue/index',
     })
   },
+  navDeatil(){
+    wx.navigateTo({
+      url: './detail/index',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

@@ -14,6 +14,7 @@
     "pages/resell/detail/index",
     "pages/spell/index",
     "pages/lose/index",
+    "pages/lose/detail/index",
     "pages/lose/issue/index",
     "pages/love/index",
     "pages/login/index"

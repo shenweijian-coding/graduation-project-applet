@@ -1,31 +1,20 @@
-// pages/news/index.js
-import request from '../../utils/request'
+// pages/lose/detail/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    newsList: [], // 新闻列表
-    recNews: {} // 顶部新闻
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getNewsList()
+
   },
-  async getNewsList(){
-    const data = await request({
-      url: '/api/getNewsList'
-    })
-    console.log(data.data);
-    this.setData({
-      newsList: data.data.newsList,
-      recNews: data.data.recNews
-    })
-  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -1,0 +1,43 @@
+.item-con{
+  width: 80%;
+  height: 180rpx;
+  background-color: #fff;
+  border-radius: 4px;
+  margin:  40rpx auto;
+  padding: 30rpx;
+  box-shadow: 0 0rpx 14rpx 0 rgba(0, 0, 0, .1);
+}
+.flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex2{
+  display: flex;
+  flex-direction: column;
+  justify-self: flex-end;
+}
+.item-img{
+  height: 100%;
+  width: 200rpx;
+  overflow: hidden;
+  border-radius: 8px ;
+}
+.item-info{
+  flex: 1;
+  line-height: 56rpx;
+  margin-left: 30rpx;
+}
+.item-reward{
+  font-size: 26rpx;
+}
+.tag{
+  display: inline-block;
+  padding: 0 20rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  margin-right: 10rpx;
+  background-color: #dcdcdc;
+  border-radius: 20px;
+  font-size: 24rpx;
+}

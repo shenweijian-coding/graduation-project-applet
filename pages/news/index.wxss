@@ -1,12 +1,12 @@
 .swiper-container {
   width: 750rpx;
-  height: 475rpx;
+  height: 375rpx;
   position: relative;
   z-index: 1;
 }
 .swiper-container .swiper1 {
   width: 750rpx;
-  height: 475rpx;
+  height: 375rpx;
 }
 .swiper-container .swiper1 image {
   width: 750rpx;
@@ -25,6 +25,22 @@
 .news-item{
   padding: 30rpx 20rpx;
   border-bottom: 1px solid #f7f7f7f7;
+
+}
+.item-title{
+  width: 500rpx;
+
+}
+.time{
+  font-size: 24rpx;
+  color: #aaa;
+}
+.flex{
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+}
+.ellipsis{
+  overflow: hidden;  /*超出部分隐藏*/
+  white-space: nowrap;  /*禁止换行*/
+  text-overflow: ellipsis; /*省略号*/
 }

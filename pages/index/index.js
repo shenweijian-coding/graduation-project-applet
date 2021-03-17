@@ -1,13 +1,10 @@
 // index.js
 // 获取应用实例
 const app = getApp()
-
+import request from '../../utils/request'
 Page({
   data: {
     banners:[
-      {
-        picUrl: 'http://211.81.208.4/uploads/img1/20200406/5e956cbeb5b7e.jpg'
-      }
     ],
     categories: [
       {
@@ -51,11 +48,7 @@ Page({
         path: "love"
       }
     ],
-    noticeList: [
-      {
-        title: '以 Button 组件为例，只需要在app.json或index.json中配置 Button 对应的路径即可。'
-      }
-    ]
+    notice:''
   },
   // 跳转对应页面
   getCurPage(e){
@@ -64,7 +57,12 @@ Page({
     })
   },
   onLoad() {
-
+  },
+  async getHomeInfo(){
+    const data = await request({
+      url: '/api/getHomeInfo'
+    })
+    this.setData({ banners: data.data.banners, notice:data.data.notice })
   },
   onShow() {
     const userInfo = wx.getStorageSync('userInfo')
@@ -73,5 +71,7 @@ Page({
         url: '../login/index',
       })
     }
+    // 获取首页banner 校园公告信息
+    this.getHomeInfo()
   }
 })
