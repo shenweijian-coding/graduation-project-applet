@@ -1,49 +1,23 @@
-// pages/love/index.js
+// pages/love/detail/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    ani: ''
+    banners:['https://img.zcool.cn/community/019ff36056c05d11013fb117ce6d25.jpg@260w_195h_1c_1e_1o_100sh.jpg'],
+    curImgBg: 'https://img.zcool.cn/community/019ff36056c05d11013fb117ce6d25.jpg@260w_195h_1c_1e_1o_100sh.jpg'
   },
-  start:function(){
-    var animation = wx.createAnimation({
-      duration: 2000,
-      timingFunction: 'ease',
-      delay: 0,
-    });
-    let next = true;
-    setInterval(() => {
-      if(next){
-        animation.opacity(0.2).step()
-        next = !next
-      }else{
-        animation.opacity(1).step()
-        next = !next
-      }
-      this.setData({
-        ani:  animation.export()
-      })
-    }, 1000);
-  },
-  // 返回
   back(){
     wx.navigateBack({
-      delta: 1,
-    })
-  },
-  // 详细
-  navToDetail(){
-    wx.navigateTo({
-      url: './detail/index',
+      delta: 1
     })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.start()
+
   },
 
   /**

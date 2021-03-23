@@ -1,4 +1,5 @@
 {
   "usingComponents": {},
-  "navigationBarTitleText":"遇见TA"
+  "navigationBarTitleText":"遇见TA",
+  "navigationStyle":"custom"
 }

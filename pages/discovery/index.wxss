@@ -1,1 +1,12 @@
-/* pages/discovery/index.wxss */
+.school{
+  width: 100%;
+  height: 800rpx;
+}
+.option{
+  padding: 30rpx;
+}
+.btn{
+  font-size: 26rpx;
+  display: inline-block;
+  margin: 4rpx 8rpx;
+}

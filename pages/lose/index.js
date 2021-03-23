@@ -1,21 +1,42 @@
 // pages/lose/index.js
+import request from '../../utils/request'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    lostInfo:[],
+    foundInfo: [],
+    banners: ['http://127.0.0.1:3000/public/lost.jpg']
   },
   navIssuePage(){
     wx.navigateTo({
       url: './issue/index',
     })
   },
-  navDeatil(){
+  navDeatil(e){
+    console.log(e);
     wx.navigateTo({
-      url: './detail/index',
+      url: `./detail/index?data=${JSON.stringify(e.currentTarget.dataset.item)}`,
     })
+  },
+  // tab切换
+  changeTab(e){
+    console.log(e);
+    this.getLostInfo(e.detail.name)
+  },
+  // 查询物品信息
+  async getLostInfo(role){
+    const lostInfo = await request({
+      url: `/api/getLostInfo?role=${role}`
+    })
+    console.log(lostInfo);
+    if(role==1){
+      this.setData({ lostInfo: lostInfo.data })
+    }else{
+      this.setData({ foundInfo: lostInfo.data })
+    }
   },
   /**
    * 生命周期函数--监听页面加载
@@ -35,7 +56,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.getLostInfo('1')
   },
 
   /**

@@ -1,3 +1,17 @@
+.swiper-container {
+  width: 750rpx;
+  height: 340rpx;
+  position: relative;
+  z-index: 1;
+}
+.swiper-container .swiper1 {
+  width: 750rpx;
+  height: 340rpx;
+}
+.swiper-container .swiper1 image {
+  width: 750rpx;
+  height: 340rpx;
+}
 .item-con{
   width: 80%;
   height: 180rpx;
@@ -22,6 +36,9 @@
   width: 200rpx;
   overflow: hidden;
   border-radius: 8px ;
+}
+.item-img image{
+  width: 100%;
 }
 .item-info{
   flex: 1;

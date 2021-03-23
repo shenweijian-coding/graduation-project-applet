@@ -85,6 +85,14 @@ Page({
       method: 'POST',
       data: reqData
     })
+    wx.showToast({
+      title: res.message,
+      success:()=>{
+        wx.navigateBack({
+          delta: 1,
+        })
+      }
+    })
     console.log(res);
   },
   /**

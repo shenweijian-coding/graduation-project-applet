@@ -1,20 +1,39 @@
+  <!-- banner区域 -->
+  <view class="swiper-container">
+  <swiper class="swiper1" indicator-dots="true" indicator-active-color="#fff" autoplay circular>
+    <swiper-item wx:for="{{banners}}" wx:key="id">
+      <image mode="aspectFill" src="{{item}}" />
+    </swiper-item>
+  </swiper>
+</view>
 <my-issue navPath="./issue/index"/>
-<van-tabs color="#f45670">
-  <van-tab title="失物">
-    <block wx:for="{{4}}">
-      <view class="item-con flex" bindtap="navDeatil">
-        <view class="item-img"><image mode="widthFix" src="https://img.zcool.cn/community/01a6a0604e35d811013fb117ebecbc.jpg@260w_195h_1c_1e_1o_100sh.jpg"></image></view>
+<van-tabs color="#f45670" bind:change="changeTab">
+  <van-tab title="失物" name="1">
+    <block wx:for="{{lostInfo}}">
+      <view class="item-con flex" data-item="{{item}}" bindtap="navDeatil">
+        <view class="item-img"><image mode="widthFix" src="{{item.img[0]}}"></image></view>
         <view class="item-info">
-          <view class="item-title">手机</view>
+          <view class="item-title">{{item.title}}</view>
           <view class="item-tag">
-            <view class="tag">蓝色</view>
-            <view class="tag">蓝色</view>
+            <view class="tag" wx:for="{{item.keyWordList}}">{{item}}</view>
           </view>
-          <view class="item-reward">酬金: <text style="color: #e52d29;">23元</text> </view>
+          <view class="item-reward">酬金: <text style="color: #e52d29;">{{item.reward}}</text> </view>
         </view>
       </view>
     </block>
   </van-tab>
-  <van-tab title="招领">
+  <van-tab title="招领" name="2">
+    <block wx:for="{{foundInfo}}">
+      <view class="item-con flex" data-item="{{item}}" bindtap="navDeatil">
+        <view class="item-img"><image mode="widthFix" src="{{item.img[0]}}"></image></view>
+        <view class="item-info">
+          <view class="item-title">{{item.title}}</view>
+          <view class="item-tag">
+            <view class="tag" wx:for="{{item.keyWordList}}">{{item}}</view>
+          </view>
+          <view class="item-reward">酬金: <text style="color: #e52d29;">{{item.reward}}</text> </view>
+        </view>
+      </view>
+    </block>
   </van-tab>
 </van-tabs>

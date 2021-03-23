@@ -1,0 +1,28 @@
+<!-- 评论列表 -->
+<view class="comment-title pad">相关评论</view>
+<view style="margin-bottom:100rpx;">
+  <van-empty wx:if="{{!commentList}}" description="暂无评论" />
+  <view wx:else>
+  <block wx:for="{{commentList}}" wx:key="index">
+  <view class="pad">
+  <view class="flex">
+    <view class="flex">
+      <image class="avator" mode="widthFix"
+        src="{{item.avatarUrl}}">
+      </image>
+      <view>
+        <view class="flex3">
+          <view>{{item.name}}</view>
+          <view wx:if="{{item.gender}}" class="gender-1 iconfont icon-nv"></view>
+          <view wx:else class="gender-0 iconfont icon-nan"></view>
+        </view>
+        <view class="time">{{item.createTime}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="info">{{item.desc}}</view>
+  </view>
+  <view class="comment-line"></view>
+  </block>
+  </view>
+</view>

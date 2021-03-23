@@ -1,0 +1,68 @@
+.swiper-container {
+  width: 750rpx;
+  height: 475rpx;
+  position: relative;
+  z-index: 1;
+  margin-top: 24%;
+}
+.swiper-container .swiper1 {
+  width: 750rpx;
+  height: 475rpx;
+}
+.swiper-container .swiper1 image {
+  width: 750rpx;
+  height: 475rpx;
+}
+.back{
+  color: #fff;
+  font-size: 38rpx;
+  position: fixed;
+  z-index: 10;
+  top: 7%;
+  left: 6%;
+}
+.bg-img{
+  position: absolute;
+  filter: blur(20px);
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.user-name{
+  color: #44a7f8;
+  font-size: 34rpx;
+}
+.love-type{
+  font-size: 26rpx;
+  color: #9e9e9e;
+  margin-left: 30rpx;
+}
+.item-con{
+  padding: 30rpx 0;
+  line-height: 50rpx;
+  font-size: 34rpx;
+}
+.flex{
+  display: flex;
+  align-items: center;
+}
+.item{
+  width: 86%;
+  padding: 30rpx 30rpx;
+  background-color: #fff;
+  border-radius: 6px;
+  position: relative;
+}
+.line{
+  background-color: #f7f7f7f7;
+  height: 10rpx;
+}
+.comment{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #fff;
+  height: 100rpx;
+  border-top: 1px solid #f7f7f7f7;
+}

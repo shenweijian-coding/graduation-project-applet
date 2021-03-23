@@ -1,0 +1,23 @@
+<view class="bg">
+  <van-icon name="arrow-left" bindtap="back" class="back"/>
+  <my-issue navPath="./issue/index"></my-issue>>
+<view class="top-img">
+<image mode="widthFix" animation="{{ani}}" src="https://oss.mengpengkeji.com/static/font.png"></image>
+</view>
+<view class="item" wx:for="{{2}}" bindtap="navToDetail">
+  <view class="border-img">
+    <cover-image  src="/images/千库网_情人节恋爱热聊分割线_GIF编号23945.gif"></cover-image>
+  </view>
+<view class="item-user flex">
+<view class="user-name">猿小申</view>
+<view class="love-type">单身表白</view>
+</view>
+<view class="item-con">
+本人长的极富创造性，印证了上帝很公平的，朋友们都说我是明星的大集合...
+</view>
+<view class="item-img flex2">
+  <image mode="widthFix" src="https://reviveimg.hellorf.com/www/images/06b10620629c48ca84cf76131d5def81.jpg"></image>
+  <image mode="widthFix" src="https://reviveimg.hellorf.com/www/images/06b10620629c48ca84cf76131d5def81.jpg"></image>
+</view>
+</view>
+</view>

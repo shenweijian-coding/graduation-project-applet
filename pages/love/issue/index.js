@@ -1,49 +1,18 @@
-// pages/love/index.js
+// pages/love/issue/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    ani: ''
+
   },
-  start:function(){
-    var animation = wx.createAnimation({
-      duration: 2000,
-      timingFunction: 'ease',
-      delay: 0,
-    });
-    let next = true;
-    setInterval(() => {
-      if(next){
-        animation.opacity(0.2).step()
-        next = !next
-      }else{
-        animation.opacity(1).step()
-        next = !next
-      }
-      this.setData({
-        ani:  animation.export()
-      })
-    }, 1000);
-  },
-  // 返回
-  back(){
-    wx.navigateBack({
-      delta: 1,
-    })
-  },
-  // 详细
-  navToDetail(){
-    wx.navigateTo({
-      url: './detail/index',
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.start()
+
   },
 
   /**

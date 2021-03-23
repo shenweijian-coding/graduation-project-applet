@@ -29,7 +29,8 @@
 </view>
 <view class="line"></view>
 <!-- 评论列表 -->
-<view class="comment-title pad">相关评论</view>
+<my-comment commentList="{{commentList}}"></my-comment>
+<!-- <view class="comment-title pad">相关评论</view>
 <view style="margin-bottom:100rpx;">
   <block wx:for="{{commentList}}" wx:key="index">
   <view class="pad">
@@ -52,7 +53,7 @@
   </view>
   <view class="comment-line"></view>
 </block>
-</view>
+</view> -->
 <!-- 评论模块 -->
   <view class="comment">
   <van-field

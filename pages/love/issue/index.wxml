@@ -1,0 +1,15 @@
+
+<view class="pad">
+  <view class="issue-title">昵称</view>
+  <input type="text" placeholder="发布昵称(留空匿名)"/>
+</view>
+  <view class="pad">
+  <view class="issue-title">详细描述</view>
+  <view>
+    <textarea bindinput="getDesc" value="{{desc}}" name="" id="" cols="30" rows="10" placeholder="不止爱情需要表白"></textarea>
+  </view>
+</view>
+<view class="pad issue-img">
+  <view class="issue-title">添加图片</view>
+  <van-uploader accept="image" max-count="{{2}}" file-list="{{ fileList }}" bind:after-read="afterRead"/></view>
+  <button bindtap="submit">确认发布</button>

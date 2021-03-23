@@ -17,6 +17,8 @@
     "pages/lose/detail/index",
     "pages/lose/issue/index",
     "pages/love/index",
+    "pages/love/issue/index",
+    "pages/love/detail/index",
     "pages/login/index"
   ],
   "window":{
@@ -65,7 +67,9 @@
     "van-radio-group": "@vant/weapp/radio-group/index",
     "van-uploader": "@vant/weapp/uploader/index",
     "van-switch": "@vant/weapp/switch/index",
+    "van-empty": "@vant/weapp/empty/index",
     "my-card":"./component/Card/card",
-    "my-issue": "./component/Issue/issue"
+    "my-issue": "./component/Issue/issue",
+    "my-comment":"./component/comment/comment"
   }
 }

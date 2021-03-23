@@ -39,7 +39,7 @@
   width: 100%;
 }
 button{
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   background-color: #f45670;

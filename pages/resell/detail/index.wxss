@@ -1,4 +1,1 @@
 @import '../../../style/public.wxss';
-.comment-title{
-  color: #bcbcbc;
-}
