@@ -1,11 +1,12 @@
 // pages/spell/index.js
+import request from '../../utils/request'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    helpInfo: []
   },
 
   /**
@@ -14,7 +15,14 @@ Page({
   onLoad: function (options) {
 
   },
-
+  async getHelpInfo(){
+    const data = await request({
+      url: '/api/getHelpInfo'
+    })
+    console.log(data);
+    const helpInfo = data.data.reverse()
+    this.setData({ helpInfo: helpInfo })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -26,7 +34,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.getHelpInfo()
   },
 
   /**

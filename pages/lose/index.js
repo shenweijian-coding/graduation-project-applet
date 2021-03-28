@@ -33,9 +33,9 @@ Page({
     })
     console.log(lostInfo);
     if(role==1){
-      this.setData({ lostInfo: lostInfo.data })
+      this.setData({ lostInfo: lostInfo.data.reverse() })
     }else{
-      this.setData({ foundInfo: lostInfo.data })
+      this.setData({ foundInfo: lostInfo.data.reverse() })
     }
   },
   /**
@@ -57,6 +57,7 @@ Page({
    */
   onShow: function () {
     this.getLostInfo('1')
+    this.getLostInfo('2')
   },
 
   /**

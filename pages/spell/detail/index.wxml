@@ -1,0 +1,40 @@
+<!-- 物品信息 -->
+<view class="pad">
+  <view class="flex">
+    <view class="flex">
+      <image class="avator" mode="widthFix"
+        src="{{curHelpInfo.userInfo.avatarUrl}}">
+      </image>
+      <view>
+        <view class="flex3">
+          <view>{{curHelpInfo.userInfo.name}}</view>
+          <view wx:if="{{curHelpInfo.userInfo.gender}}" class="gender-1 iconfont icon-nv"></view>
+          <view wx:else class="gender-0 iconfont icon-nan"></view>
+        </view>
+        <view class="time">{{curHelpInfo.createTime}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="info">{{curHelpInfo.desc}}</view>
+  <view class="img flex">
+    <block wx:for="{{curHelpInfo.img}}" wx:key="index">
+    <image mode="widthFix"
+      src="{{item}}"></image>
+    </block>
+  </view>
+</view>
+<view class="line"></view>
+<!-- 评论列表 -->
+<my-comment commentList="{{commentList}}"></my-comment>
+  <view class="comment">
+  <van-field
+    value="{{ comment }}"
+    placeholder="发表友善的评论"
+    border="{{ true }}"
+    bind:change="changeComment"
+  >
+  <van-button round color="#f45670" slot="button" size="small" bindtap="submit">
+      评论
+    </van-button>
+</van-field>>
+</view>

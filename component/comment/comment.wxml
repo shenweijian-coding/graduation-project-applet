@@ -1,7 +1,7 @@
 <!-- 评论列表 -->
 <view class="comment-title pad">相关评论</view>
 <view style="margin-bottom:100rpx;">
-  <van-empty wx:if="{{!commentList}}" description="暂无评论" />
+  <van-empty wx:if="{{!commentList.length}}" description="暂无评论" />
   <view wx:else>
   <block wx:for="{{commentList}}" wx:key="index">
   <view class="pad">

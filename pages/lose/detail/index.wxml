@@ -17,9 +17,14 @@
     <view style="color:#8a8a8a;">给予酬金：<text style="color:#000;">{{info.reward}}</text></view>
     <view style="color:#8a8a8a;">关键词描述：<text style="color:#000;">{{info.keyWordList}}</text></view>
   </view>
- <block wx:for="{{info.img}}">
+<view wx:if="{{!info.img.length}}">
+  <van-empty description="暂无图片" />
+</view>
+<view wx:else>
+  <block wx:for="{{info.img}}">
   <image class="lose-img" mode="widthFix" src="{{item}}"></image>
  </block>
+</view>
 </view>
   <!-- 立即联系 -->
   <button>立即联系</button>

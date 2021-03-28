@@ -1,1 +1,15 @@
 /* pages/resell/index.wxss */
+.swiper-container {
+  width: 750rpx;
+  height: 375rpx;
+  position: relative;
+  z-index: 1;
+}
+.swiper-container .swiper1 {
+  width: 750rpx;
+  height: 375rpx;
+}
+.swiper-container .swiper1 image {
+  width: 750rpx;
+  height: 375rpx;
+}

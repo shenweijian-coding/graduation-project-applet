@@ -1,12 +1,15 @@
 // pages/love/index.js
+import request from '../../utils/request'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    ani: ''
+    ani: '',
+    loveInfo: []
   },
+  // 循环动画
   start:function(){
     var animation = wx.createAnimation({
       duration: 2000,
@@ -34,9 +37,10 @@ Page({
     })
   },
   // 详细
-  navToDetail(){
+  navToDetail(e){
+    console.log(e);
     wx.navigateTo({
-      url: './detail/index',
+      url: `./detail/index?data=${JSON.stringify(e.currentTarget.dataset.item)}`,
     })
   },
   /**
@@ -45,7 +49,14 @@ Page({
   onLoad: function (options) {
     this.start()
   },
-
+  // 获取表白信息
+  async getLoveInfo(){
+    const data = await request({
+      url: '/api/getLoveInfo'
+    })
+    const loveInfo = data.data.reverse()
+    this.setData({ loveInfo: loveInfo  })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -57,7 +68,8 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    // 获取表白信息
+    this.getLoveInfo()
   },
 
   /**

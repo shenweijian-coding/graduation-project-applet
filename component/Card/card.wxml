@@ -15,7 +15,7 @@
       </view>
     </view>
     <view>
-      <view class="price">￥{{item.price}}</view>
+      <view class="price" wx:if="{{item.price}}">￥{{item.price}}</view>
       <view class="tag" wx:if="{{item.isNew}}">95新</view>
     </view>
     </view>

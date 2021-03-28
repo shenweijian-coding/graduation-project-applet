@@ -14,7 +14,7 @@
   <view>
 <block wx:for="{{newsList}}" class="flex" wx:key="index">
   <view class="news-item flex">
-    <van-icon style="color:#6dc9f7;" name="hot-o" />
+    <van-icon style="color:#f45670;" name="hot-o" />
     <view class="item-title ellipsis">
       {{item.title}}
     </view>

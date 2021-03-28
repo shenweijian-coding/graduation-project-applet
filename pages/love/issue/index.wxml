@@ -1,7 +1,7 @@
 
 <view class="pad">
   <view class="issue-title">昵称</view>
-  <input type="text" placeholder="发布昵称(留空匿名)"/>
+  <input value="{{name}}" bindinput="getName" type="text" placeholder="发布昵称(留空匿名)"/>
 </view>
   <view class="pad">
   <view class="issue-title">详细描述</view>

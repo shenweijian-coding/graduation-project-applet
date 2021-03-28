@@ -1,1 +1,2 @@
-<my-card />
+<my-issue navPath="./issue/index"/>
+<my-card data="{{helpInfo}}" />

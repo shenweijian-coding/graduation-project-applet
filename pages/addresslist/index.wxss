@@ -13,7 +13,7 @@
   border-bottom: 18rpx solid #f7f7f7f7;
 }
 .active{
-  color: #00b26a;
+  color: #f45670;
   background-color: #f7f7f7f7;
 }
 .left, .right{

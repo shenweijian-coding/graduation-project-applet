@@ -1,4 +1,4 @@
-// pages/love/issue/index.js
+// pages/spell/issue/index.js
 import request from '../../../utils/request'
 import { formatTime } from '../../../utils/util'
 Page({
@@ -7,18 +7,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-    fileList: [],
-    name: '',
-    desc: ''
+    desc: '',
+    fileList: []
   },
-  // 获取名称
-  getName(e){
-    this.setData({ name: e.detail.value })
-  },
-  // 获取详细信息
   getDesc(e){
-    console.log(e);
-    this.setData({ desc: e.detail.value })
+    this.setData({ desc:e.detail.value })
   },
   // 上传图片
   afterRead(event){
@@ -43,30 +36,28 @@ Page({
   },
   // 确认发布
   async submit(){
-    const data = this.data
-    const img = data.fileList.map(i => `http://127.0.0.1:3000/${i.url}`)
-    const reqData = {
-      name:data.name,
-      desc: data.desc,
-      createTime: formatTime(),
-      img:img,
-      disNum:0,
-      likeNum:0
-    }
+    const desc = this.data.desc
+    const img = this.data.fileList.map(i=>`http://127.0.0.1:3000/${i.url}`)
     const res = await request({
-      url: '/api/issueLoveInfo',
+      url: '/api/issueNeedInfo',
       method: 'POST',
-      data: reqData
+      data:{
+        img:img,
+        desc:desc,
+        createTime:formatTime(),
+        disNum:0,
+        likeNum:0
+      }
     })
-    console.log(res);
     wx.showToast({
       title: res.message,
-      success: ()=>{
+      success:()=>{
         wx.navigateBack({
           delta: 1,
         })
       }
     })
+    console.log(res);
   },
   /**
    * 生命周期函数--监听页面加载

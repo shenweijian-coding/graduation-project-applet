@@ -1,6 +1,6 @@
 .submit-btn{
   width: 90%;
   margin-top: 40rpx;
-  background-color: #00b26a;
+  background-color: #f45670;
   color: #fff;
 }

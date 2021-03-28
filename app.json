@@ -4,6 +4,7 @@
     "pages/discovery/index",
     "pages/my/index",
     "pages/my/setting/index",
+    "pages/my/issue/index",
     "pages/news/index",
     "pages/addresslist/index",
     "pages/club/index",
@@ -13,6 +14,8 @@
     "pages/resell/issue/index",
     "pages/resell/detail/index",
     "pages/spell/index",
+    "pages/spell/issue/index",
+    "pages/spell/detail/index",
     "pages/lose/index",
     "pages/lose/detail/index",
     "pages/lose/issue/index",
@@ -29,7 +32,7 @@
   },
   "tabBar": {
     "color": "#6e6d6b",
-    "selectedColor": "#1dce7c",
+    "selectedColor": "#f45670",
     "borderStyle": "white",
     "backgroundColor": "#fff",
     "list": [

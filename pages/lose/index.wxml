@@ -11,7 +11,10 @@
   <van-tab title="失物" name="1">
     <block wx:for="{{lostInfo}}">
       <view class="item-con flex" data-item="{{item}}" bindtap="navDeatil">
-        <view class="item-img"><image mode="widthFix" src="{{item.img[0]}}"></image></view>
+        <view class="item-img">
+          <image wx:if="{{item.img[0]}}" mode="widthFix" src="{{item.img[0]}}"></image>
+          <image wx:else mode="widthFix" src="/images/暂无图片.png"></image>
+        </view>
         <view class="item-info">
           <view class="item-title">{{item.title}}</view>
           <view class="item-tag">

@@ -38,6 +38,7 @@
 .flex{
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .ellipsis{
   overflow: hidden;  /*超出部分隐藏*/

@@ -1,17 +1,16 @@
 .swiper-container {
   width: 750rpx;
-  height: 475rpx;
+  height: 600rpx;
   position: relative;
   z-index: 1;
   margin-top: 24%;
 }
 .swiper-container .swiper1 {
   width: 750rpx;
-  height: 475rpx;
+  height: 100%;
 }
 .swiper-container .swiper1 image {
-  width: 750rpx;
-  height: 475rpx;
+  width: 100%;
 }
 .back{
   color: #fff;
@@ -27,6 +26,7 @@
   top: 0;
   left: 0;
   right: 0;
+  width: 100%;
 }
 .user-name{
   color: #44a7f8;

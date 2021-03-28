@@ -1,0 +1,8 @@
+<van-tabs bind:disabled="onClickDisabled">
+  <van-tab title="二手物品">
+    <van-empty description="暂无内容" /></van-tab>
+  <van-tab title="互帮互助">
+    <van-empty description="暂无内容" /></van-tab>
+  <van-tab title="告白墙"><van-empty description="暂无内容" />
+  </van-tab>
+</van-tabs>

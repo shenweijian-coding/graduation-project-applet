@@ -1,0 +1,13 @@
+<view class="pad">
+  <view class="issue-title">详细信息</view>
+  <view>
+    <textarea bindinput="getDesc" value="{{desc}}" name="" id="" cols="30" rows="10" placeholder="描述一下你的详细信息"></textarea>
+  </view>
+</view>
+
+<!-- 添加照片 -->
+<view class="pad issue-img">
+  <van-uploader accept="image" max-count="{{2}}" file-list="{{ fileList }}" bind:after-read="afterRead"/>
+</view>
+
+<button bindtap="submit">确认发布</button>

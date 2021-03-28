@@ -9,7 +9,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    curTradeInfo: {},
+    curHelpInfo: {},
     comment: '',
     commentList: []
   },
@@ -21,7 +21,7 @@ Page({
   async submit(){
     const userInfo = globalData.userInfo
     const desc = this.data.comment
-    const id = this.data.curTradeInfo._id
+    const id = this.data.curHelpInfo._id
     const avatarUrl = userInfo.avatarUrl
     const gender = userInfo.gender
     const name = userInfo.nickName
@@ -31,7 +31,7 @@ Page({
       url: '/api/issueComment',
       method: 'POST',
       data: {
-        type: 1,
+        type: 2,
         id,
         commentInfo:{
           desc,avatarUrl,gender,name,createTime
@@ -49,14 +49,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options);
-    const curTradeInfo = JSON.parse(options.data)
-    console.log(curTradeInfo);
-    this.setData({ curTradeInfo })
-    // 查询评论信息
+    const curHelpInfo = JSON.parse(options.data)
+    this.setData({ curHelpInfo })
   },
+  // 查询评论信息
   async getCommentList(){
-    const id = this.data.curTradeInfo._id
+    const id = this.data.curHelpInfo._id
     const res = await request({
       url: `/api/getCommentList?id=${id}`
     })
