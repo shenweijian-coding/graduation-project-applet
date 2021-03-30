@@ -1,5 +1,5 @@
 // pages/news/index.js
-import request from '../../utils/request'
+import {request} from '../../utils/request'
 Page({
 
   /**
@@ -24,6 +24,12 @@ Page({
     this.setData({
       newsList: data.data.newsList,
       recNews: data.data.recNews
+    })
+  },
+  // 查看详情
+  navDetail(e){
+    wx.navigateTo({
+      url: `./detail/index?data=${JSON.stringify(e.currentTarget.dataset.item)}`,
     })
   },
   /**

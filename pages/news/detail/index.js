@@ -1,55 +1,48 @@
-// pages/my/issue/index.js
-import {request} from '../../../utils/request'
+// pages/news/detail/index.js
+import { request } from '../../../utils/request'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    trade: [],
-    love: [],
-    help:[],
-    lostandfound:[]
+    curInfo: '',
+    detail:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    const curInfo = JSON.parse(options.data)
+    this.getNewsInfo(curInfo.href)
+    wx.setNavigationBarTitle({
+      title:curInfo.title,
+    })
+    this.setData({ curInfo })
   },
-
+  // 获取信息详情
+  async getNewsInfo(href){
+    const res = await request({
+      url: `/api/getNewsInfo?href=${href}`
+    })
+    this.setData({...res.data})
+    console.log(res);
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
 
   },
-  // tab切换
-  changeTab(e){
-    console.log(e);
-    this.getUserIssueInfo(e.detail.name)
-  },
-  // 导航到详情
-  navDetail(e){
-    console.log(e);
-    wx.navigateTo({
-      url: `${e.currentTarget.dataset.path}?data=${JSON.stringify(e.currentTarget.dataset.item)}`,
-    })
-  },
+
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.getUserIssueInfo('trade')
+
   },
-  // 获取个人发布信息
-  async getUserIssueInfo(type){
-    const res = await request({
-      url: `/api/getIssueInfo?type=${type}`
-    })
-    this.setData({ [type]: res.data })
-  },
+
   /**
    * 生命周期函数--监听页面隐藏
    */

@@ -1,1 +1,18 @@
-/* pages/my/issue/index.wxss */
+@import '/style/iconfont.wxss';
+.pad{
+  padding: 30rpx;
+
+}
+.card{
+  line-height: 50rpx;
+  border-bottom: 6rpx solid #f7f7f7f7;
+  color: #aaa;
+}
+.btn{
+  color: #f45670;
+  margin-top: 68rpx;
+}
+.flex{
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,12 @@
+<view class="con">
+<view class="con-top">
+  <view class="title">{{curInfo.title}}</view>
+  <view class="flex">
+    <view>发布时间：{{curInfo.time}}</view>
+    <view>来源：教务处</view>
+  </view>
+</view>
+  <block wx:for="{{detail}}">
+  <view>{{item}}</view>
+</block>
+</view>

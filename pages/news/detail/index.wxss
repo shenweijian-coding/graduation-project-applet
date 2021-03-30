@@ -1,0 +1,17 @@
+.con{
+  padding: 30rpx;
+}
+.con-top{
+  margin-bottom: 30rpx;
+  line-height: 90rpx;
+}
+.title{
+  font-size: 42rpx;
+  font-weight: bold;
+  text-align: center;
+  line-height: 50rpx;
+}
+.flex{
+  display: flex;
+  justify-content: space-evenly;
+}

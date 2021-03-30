@@ -1,5 +1,5 @@
 // pages/my/setting/index.js
-import request from '../../../utils/request'
+import {request} from '../../../utils/request'
 const app = getApp()
 const globalData = app.globalData
 Page({

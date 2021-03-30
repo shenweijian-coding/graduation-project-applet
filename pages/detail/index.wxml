@@ -1,0 +1,69 @@
+<!-- 物品信息 -->
+<view class="pad">
+  <view class="flex">
+    <view class="flex">
+      <image class="avator" mode="widthFix"
+        src="{{curTradeInfo.userInfo.avatarUrl}}">
+      </image>
+      <view>
+        <view class="flex3">
+          <view>{{curTradeInfo.userInfo.name}}</view>
+          <view wx:if="{{curTradeInfo.userInfo.gender}}" class="gender-1 iconfont icon-nv"></view>
+          <view wx:else class="gender-0 iconfont icon-nan"></view>
+        </view>
+        <view class="time">{{curTradeInfo.createTime}}</view>
+      </view>
+    </view>
+    <view>
+      <view class="price" wx:if="{{curTradeInfo.price}}">￥{{curTradeInfo.price}}</view>
+      <view class="tag" wx:if="{{curTradeInfo.isNew}}">95新</view>
+    </view>
+  </view>
+  <view class="info">{{curTradeInfo.desc}}</view>
+  <view class="img flex">
+    <block wx:for="{{curTradeInfo.img}}" wx:key="index">
+    <image mode="widthFix"
+      src="{{item}}"></image>
+    </block>
+  </view>
+</view>
+<view class="line"></view>
+<!-- 评论列表 -->
+<my-comment commentList="{{commentList}}"></my-comment>
+<!-- <view class="comment-title pad">相关评论</view>
+<view style="margin-bottom:100rpx;">
+  <block wx:for="{{commentList}}" wx:key="index">
+  <view class="pad">
+  <view class="flex">
+    <view class="flex">
+      <image class="avator" mode="widthFix"
+        src="{{item.avatarUrl}}">
+      </image>
+      <view>
+        <view class="flex3">
+          <view>{{item.name}}</view>
+          <view wx:if="{{item.gender}}" class="gender-1 iconfont icon-nv"></view>
+          <view wx:else class="gender-0 iconfont icon-nan"></view>
+        </view>
+        <view class="time">{{item.createTime}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="info">{{item.desc}}</view>
+  </view>
+  <view class="comment-line"></view>
+</block>
+</view> -->
+<!-- 评论模块 -->
+  <view class="comment">
+  <van-field
+    value="{{ comment }}"
+    placeholder="发表友善的评论"
+    border="{{ true }}"
+    bind:change="changeComment"
+  >
+  <van-button round color="#f45670" slot="button" size="small" bindtap="submit">
+      评论
+    </van-button>
+</van-field>>
+</view>

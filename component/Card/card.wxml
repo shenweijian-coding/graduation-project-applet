@@ -1,5 +1,5 @@
 <view class="con-bg">
-  <block wx:for="{{data}}">
+  <block wx:for="{{data}}" wx:key="index">
   <view class="item">
     <view data-item="{{item}}" bindtap="navToDetail">
     <view class="flex">
@@ -21,7 +21,7 @@
     </view>
     <view class="info">{{item.desc}}</view>
     <view class="img flex">
-      <block wx:for="{{item.img}}">
+      <block wx:for="{{item.img}}" wx:key="index">
         <image mode="widthFix" src="{{item}}"></image>
       </block>
     </view>
@@ -29,7 +29,7 @@
     <view class="line"></view>
     <!-- 评论 -->
     <view class="flex" style="padding:0 40rpx">
-      <view class="flex"><van-icon size="18" name="share-o"/><view class="bottom-con">转发</view></view>
+      <button open-type="share" style="margin: 0;padding: 0;background: none;" class="flex"><van-icon size="18" name="share-o"/><view class="bottom-con">转发</view></button>
       <view data-item="{{item}}" bindtap="navToDetail" class="flex"><van-icon size="18" name="chat-o" /><view class="bottom-con" >{{item.disNum}}</view></view>
       <view class="flex"><van-icon size="18" name="good-job-o" /><view class="bottom-con">{{item.likeNum}}</view></view>
     </view>

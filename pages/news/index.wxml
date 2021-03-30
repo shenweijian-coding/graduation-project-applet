@@ -13,7 +13,7 @@
   <!-- 其他模块 -->
   <view>
 <block wx:for="{{newsList}}" class="flex" wx:key="index">
-  <view class="news-item flex">
+  <view class="news-item flex" data-item="{{item}}" bindtap="navDetail">
     <van-icon style="color:#f45670;" name="hot-o" />
     <view class="item-title ellipsis">
       {{item.title}}

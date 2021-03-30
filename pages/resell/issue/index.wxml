@@ -17,6 +17,6 @@
 <view class="line"></view>
 <van-field size="large" value="{{ price }}" placeholder="请输入价格" label="价格(元)" border="{{ true }}" bind:change="changePrice"
   input-align="right" />
-<van-field size="large" value="{{ type }}" placeholder="请输入价格" label="分类" border="{{ true }}" bind:change="onChange"
-  input-align="right" />
+<!-- <van-field size="large" value="{{ type }}" placeholder="请输入价格" label="分类" border="{{ true }}" bind:change="onChange"
+  input-align="right" /> -->
   <button bindtap="submit">确认发布</button>

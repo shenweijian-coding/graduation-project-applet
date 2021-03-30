@@ -1,11 +1,10 @@
 // index.js
 // 获取应用实例
 const app = getApp()
-import request from '../../utils/request'
+import { request } from '../../utils/request'
 Page({
   data: {
-    banners:[
-    ],
+    banners:[],
     categories: [
       {
         icon: "/images/home/news.png",
@@ -48,7 +47,8 @@ Page({
         path: "love"
       }
     ],
-    notice:''
+    notice:'',
+    recommendInfo:[]
   },
   // 跳转对应页面
   getCurPage(e){
@@ -57,12 +57,21 @@ Page({
     })
   },
   onLoad() {
+    this.getRecommendInfo()
   },
   async getHomeInfo(){
     const data = await request({
       url: '/api/getHomeInfo'
     })
     this.setData({ banners: data.data.banners, notice:data.data.notice })
+  },
+  // 获取最近发布的数据
+  async getRecommendInfo(){
+    const res = await request({
+      url: '/api/getRecommendInfo'
+    })
+    this.setData({recommendInfo:res.data})
+    console.log(res);
   },
   onShow() {
     const userInfo = wx.getStorageSync('userInfo')

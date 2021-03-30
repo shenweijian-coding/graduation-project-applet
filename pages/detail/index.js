@@ -1,6 +1,6 @@
 // pages/resell/detail/index.js
-import {request} from '../../../utils/request'
-import { formatTime } from '../../../utils/util'
+import {request} from '../../utils/request'
+import { formatTime } from '../../utils/util'
 const app = getApp()
 const globalData = app.globalData
 Page({

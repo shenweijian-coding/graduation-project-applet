@@ -60,9 +60,12 @@
   margin-right: 10px;
 }
 .hot-container{
-  padding: 20rpx;
+  padding: 20rpx 0;
   height: auto;
-  width: 92%;
+  width: 100%;
+}
+.hot-top{
+  padding: 20rpx;
 }
 .notice-container{
   width: 100%;

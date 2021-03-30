@@ -23,10 +23,16 @@ Component({
   methods: {
     // 导航到详情
     navToDetail(e){
-      console.log(e);
       wx.navigateTo({
-        url: `./detail/index?data=${JSON.stringify(e.currentTarget.dataset.item)}`,
+        url: `/pages/detail/index?data=${JSON.stringify(e.currentTarget.dataset.item)}`,
       })
-    }
+    },
+    onShareAppMessage: function () {
+      return {
+       title: '弹出分享时显示的分享标题',
+       desc: '分享页面的内容',
+       path: '/page/user?id=123' // 路径，传递参数到指定页面。
+      }
+     }
   }
 })

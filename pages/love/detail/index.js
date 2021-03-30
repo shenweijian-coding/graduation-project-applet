@@ -1,5 +1,5 @@
 // pages/love/detail/index.
-import request from '../../../utils/request'
+import {request} from '../../../utils/request'
 import { formatTime } from '../../../utils/util'
 const app = getApp()
 const globalData = app.globalData
