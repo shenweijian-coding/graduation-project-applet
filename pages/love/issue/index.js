@@ -1,6 +1,8 @@
 // pages/love/issue/index.js
 import { request, uploadFile } from '../../../utils/request'
 import { formatTime } from '../../../utils/util'
+const app = getApp();
+
 Page({
 
   /**
@@ -32,8 +34,9 @@ Page({
   },
   // 确认发布
   async submit(){
+    const domain = app.globalData.domain
     const data = this.data
-    const img = data.fileList.map(i => `http://127.0.0.1:3000/${i.url}`)
+    const img = data.fileList.map(i => `${domain}/${i.url}`)
     const reqData = {
       name:data.name,
       desc: data.desc,

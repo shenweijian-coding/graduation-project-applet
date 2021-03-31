@@ -18,6 +18,25 @@ Page({
   onLoad: function (options) {
 
   },
+  async clickLike(e){
+    const resellInfo = this.data.resellInfo
+    let dbName,isLike
+    let _id = e.detail
+    // 本地点赞+1 -1操作
+    resellInfo.map(i=>{
+      if(i._id == _id){
+        i.isLike = !i.isLike
+        i.likeNum = i.isLike ? ++i.likeNum : --i.likeNum
+        dbName = i.type
+        isLike = i.isLike
+      }
+    })
+    // 发送请求
+    request({
+      url: `/api/like?isLike=${isLike}&id=${_id}&dbName=${dbName}`
+    })
+    this.setData({ resellInfo })
+  },
   async getResellInfo(){
     const res = await request({
       url:'/api/getResellInfo'

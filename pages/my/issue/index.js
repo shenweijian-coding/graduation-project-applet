@@ -6,6 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    curTab:'trade',
     trade: [],
     love: [],
     help:[],
@@ -29,12 +30,31 @@ Page({
   changeTab(e){
     console.log(e);
     this.getUserIssueInfo(e.detail.name)
+    this.setData({ curTab: e.detail.name })
   },
-  // 导航到详情
-  navDetail(e){
-    console.log(e);
-    wx.navigateTo({
-      url: `${e.currentTarget.dataset.path}?data=${JSON.stringify(e.currentTarget.dataset.item)}`,
+  // 删除记录
+  async delete(e) {
+    const _this = this
+    const curTab = this.data.curTab
+    wx.showModal({
+      title: '删除操作',
+      content: '确定删除么，删除不可恢复！',
+      success: async (res) =>{
+        if (res.confirm) {
+          const res = await request({
+            url:`/api/del?id=${e.detail}&dbName=${curTab}`
+          })
+          wx.showToast({
+            title: res.message,
+            icon: 'none',
+            mask: true,
+            success: (res) => {
+              _this.getUserIssueInfo(curTab)
+            }
+          })
+        } else if (res.cancel) {
+        }
+      }
     })
   },
   /**

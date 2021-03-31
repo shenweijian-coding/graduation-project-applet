@@ -1,12 +1,12 @@
-// pages/spell/index.js
-import {request} from '../../utils/request'
+// pages/my/like/index.js
+import { request } from '../../../utils/request'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    helpInfo: []
+    likeList:[]
   },
 
   /**
@@ -15,33 +15,7 @@ Page({
   onLoad: function (options) {
 
   },
-  async clickLike(e){
-    const helpInfo = this.data.helpInfo
-    let dbName,isLike
-    let _id = e.detail
-    // 本地点赞+1 -1操作
-    helpInfo.map(i=>{
-      if(i._id == _id){
-        i.isLike = !i.isLike
-        i.likeNum = i.isLike ? ++i.likeNum : --i.likeNum
-        dbName = i.type
-        isLike = i.isLike
-      }
-    })
-    // 发送请求
-    request({
-      url: `/api/like?isLike=${isLike}&id=${_id}&dbName=${dbName}`
-    })
-    this.setData({ helpInfo })
-  },
-  async getHelpInfo(){
-    const data = await request({
-      url: '/api/getHelpInfo'
-    })
-    console.log(data);
-    const helpInfo = data.data.reverse()
-    this.setData({ helpInfo: helpInfo })
-  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -53,9 +27,17 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.getHelpInfo()
+    this.getLikeList()
   },
-
+  // 获取信息
+  async getLikeList() {
+    const res = await request({
+      url: `/api/getLikeIssueInfo`
+    })
+    this.setData({likeList:res.data})
+    console.log(res);
+    // this.setData({ [type]: res.data })
+  },
   /**
    * 生命周期函数--监听页面隐藏
    */

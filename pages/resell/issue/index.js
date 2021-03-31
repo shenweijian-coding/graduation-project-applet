@@ -1,6 +1,9 @@
 // pages/resell/issue/index.js
 import { request, uploadFile } from '../../../utils/request'
 import { formatTime } from '../../../utils/util'
+const app = getApp();
+
+  
 Page({
 
   /**
@@ -36,9 +39,11 @@ Page({
   },
   // 发布需求
   async submit() {
+    const domain = app.globalData.domain
     const data = this.data
-    const img = data.fileList.map(i=>`http://127.0.0.1:3000/${i.url}`)
+    const img = data.fileList.map(i=>`${domain}/${i.url}`)
     const reqData = {
+      type: 'trade',
       price: data.price,
       desc: data.desc,
       isNew: data.checked ? true : false,

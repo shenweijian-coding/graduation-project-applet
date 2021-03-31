@@ -16,7 +16,7 @@
   </van-tab>
   <van-tab name="B" title="学术科技类">
     <view class="bg">
-    <view class="club-item flex" wx:for="{{clubListA}}" wx:key="index" data-item="{{item}}" bindtap="navToetail">
+    <view class="club-item flex" wx:for="{{clubListB}}" wx:key="index" data-item="{{item}}" bindtap="navToetail">
         <image mode="widthFix" src="{{item.clubLogo}}"></image>
       <view class="right-text">
         <view class="club-name">{{item.title}}</view>
@@ -30,7 +30,7 @@
   </van-tab>
   <van-tab name="C" title="体育类">
     <view class="bg">
-    <view class="club-item flex" wx:for="{{clubListA}}" wx:key="index" data-item="{{item}}" bindtap="navToetail">
+    <view class="club-item flex" wx:for="{{clubListC}}" wx:key="index" data-item="{{item}}" bindtap="navToetail">
         <image mode="widthFix" src="{{item.clubLogo}}"></image>
       <view class="right-text">
         <view class="club-name">{{item.title}}</view>
@@ -44,7 +44,7 @@
   </van-tab>
   <van-tab name="D" title="志愿公益类">
     <view class="bg">
-    <view class="club-item flex" wx:for="{{clubListA}}" wx:key="index" data-item="{{item}}" bindtap="navToetail">
+    <view class="club-item flex" wx:for="{{clubListD}}" wx:key="index" data-item="{{item}}" bindtap="navToetail">
         <image mode="widthFix" src="{{item.clubLogo}}"></image>
       <view class="right-text">
         <view class="club-name">{{item.title}}</view>

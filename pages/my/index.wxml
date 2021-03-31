@@ -12,11 +12,9 @@
 </van-cell-group>
 <van-cell-group>
   <van-cell title="我发布的" icon="add-o" size="large" url="./issue/index" is-link arrow/>
-  <van-cell title="我点赞的" icon="good-job-o" size="large" is-link arrow/>
-  <van-cell title="我评论的" icon="comment-o" size="large" is-link arrow/>
+  <van-cell title="我点赞的" icon="good-job-o" size="large" url="./like/index" is-link arrow/>
 </van-cell-group>
 <view class="cut-off"></view>
 <van-cell-group>
-  <van-cell title="分享给好友" icon="warning-o" size="large" is-link arrow/>
-  <van-cell title="关于" icon="warning-o" size="large" is-link arrow/>
+  <van-cell title="关于" icon="warning-o" size="large" url="./about/index" is-link arrow/>
 </van-cell-group>

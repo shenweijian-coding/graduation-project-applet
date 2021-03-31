@@ -8,7 +8,7 @@ Page({
   data: {
     lostInfo:[],
     foundInfo: [],
-    banners: ['http://127.0.0.1:3000/public/lost.jpg']
+    banners: ['https://img.zcool.cn/community/01f6725d89119da801211d536e7e81.png@1280w_1l_2o_100sh.png']
   },
   navIssuePage(){
     wx.navigateTo({

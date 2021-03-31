@@ -2,13 +2,13 @@
   <van-icon name="arrow-left" bindtap="back" class="back"/>
   <my-issue navPath="./issue/index"></my-issue>>
 <view class="top-img">
-<image mode="widthFix" animation="{{ani}}" src="https://oss.mengpengkeji.com/static/font.png"></image>
+<image mode="widthFix" animation="{{ani}}" src="https://yuanxiaoshen.com:3001/public/font.png"></image>
 </view>
 <block wx:for="{{loveInfo}}" wx:index="index">
 
 <view class="item" data-item="{{item}}" bindtap="navToDetail">
   <view class="border-img">
-    <cover-image  src="/images/千库网_情人节恋爱热聊分割线_GIF编号23945.gif"></cover-image>
+    <!-- <cover-image  src=""></cover-image> -->
   </view>
 <view class="item-user flex">
 <view class="user-name">{{item.name}}</view>

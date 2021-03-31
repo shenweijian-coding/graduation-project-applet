@@ -6,6 +6,8 @@
     "pages/my/index",
     "pages/my/setting/index",
     "pages/my/issue/index",
+    "pages/my/about/index",
+    "pages/my/like/index",
     "pages/news/index",
     "pages/news/detail/index",
     "pages/addresslist/index",
@@ -26,9 +28,9 @@
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#f45670",
     "navigationBarTitleText":"北院校园通",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle":"white"
   },
   "tabBar": {
     "color": "#6e6d6b",
@@ -73,6 +75,7 @@
     "van-empty": "@vant/weapp/empty/index",
     "my-card":"./component/Card/card",
     "my-issue": "./component/Issue/issue",
-    "my-comment":"./component/comment/comment"
+    "my-comment":"./component/comment/comment",
+    "my-show":"./component/Show/show"
   }
 }

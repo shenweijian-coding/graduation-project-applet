@@ -1,60 +1,18 @@
 <van-tabs bind:change="changeTab">
   <!-- 二手物品 -->
   <van-tab name="trade" title="二手物品">
-    <block wx:if="{{trade.length}}">
-      <block wx:for="{{trade}}">
-        <view class="card pad flex">
-          <view>
-            <view class="time">发布时间：{{item.createTime}}</view>
-          <view class="con">发布内容：{{item.desc}}</view>
-          </view>
-          <view style="text-align: right;">
-            <view class="iconfont icon-shanchu"></view>
-          <view class="btn" bindtap="navDetail" data-path="/pages/detail/index" data-item="{{item}}">查看详情</view>
-          </view>
-        </view>
-      </block>
-    </block>
-    <van-empty wx:else description="暂无内容" />
+  <my-show data="{{trade}}" bind:delete="delete" path="/pages/detail/index"/>
   </van-tab>
   <!-- 互帮互助 -->
   <van-tab name="help" title="互帮互助">
-    <block wx:if="{{help.length}}">
-      <block wx:for="{{help}}" wx:key="index">
-        <view class="card pad">
-          <view class="time">发布时间：{{item.createTime}}</view>
-          <view class="con">发布内容：{{item.desc}}</view>
-          <view class="iconfont icon-shanchu"></view>
-          <view class="btn" bindtap="navDetail" data-path="/pages/detail/index" data-item="{{item}}">查看详情</view>
-        </view>
-      </block>
-    </block>
-    <van-empty wx:else description="暂无内容" />
+    <my-show data="{{help}}" bind:delete="delete" path="/pages/detail/index"/>
   </van-tab>
   <!-- 失物招领 -->
   <van-tab name="lostandfound" title="失物招领">
-    <block wx:if="{{lostandfound.length}}">
-      <block wx:for="{{lostandfound}}">
-        <view class="card pad">
-          <view class="time">发布时间：{{item.createTime}}</view>
-          <view class="con">发布内容：{{item.desc}}</view>
-          <view class="btn" bindtap="navDetail" data-path="/pages/lose/issue/index" data-item="{{item}}">查看详情</view>
-        </view>
-      </block>
-    </block>
-    <van-empty wx:else description="暂无内容" />
+    <my-show data="{{lostandfound}}" bind:delete="delete" path="/pages/lose/detail/index"/>
   </van-tab>
   <!-- 告白强 -->
   <van-tab name="love" title="告白墙">
-    <block wx:if="{{love.length}}">
-      <block wx:for="{{love}}">
-        <view class="card pad">
-          <view class="time">发布时间：{{item.createTime}}</view>
-          <view class="con">发布内容：{{item.desc}}</view>
-          <view class="btn" bindtap="navDetail" data-path="/pages/love/detail/index" data-item="{{item}}">查看详情</view>
-        </view>
-      </block>
-    </block>
-    <van-empty wx:else description="暂无内容" />
+    <my-show data="{{love}}" bind:delete="delete" path="/pages/love/detail/index"/>
   </van-tab>
 </van-tabs>

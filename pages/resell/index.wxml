@@ -6,5 +6,5 @@
     </swiper-item>
   </swiper>
 </view>
-<my-card data="{{resellInfo}}"/>
+<my-card data="{{resellInfo}}" bind:clickLike="clickLike"/>
 <my-issue navPath="./issue/index"/>

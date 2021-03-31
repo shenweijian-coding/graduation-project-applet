@@ -1,0 +1,1 @@
+<my-show data="{{likeList}}" path="/pages/detail/index"/>

@@ -13,7 +13,7 @@
       <view class="item-con flex" data-item="{{item}}" bindtap="navDeatil">
         <view class="item-img">
           <image wx:if="{{item.img[0]}}" mode="widthFix" src="{{item.img[0]}}"></image>
-          <image wx:else mode="widthFix" src="/images/暂无图片.png"></image>
+          <image wx:else mode="widthFix" src="/images//no.png"></image>
         </view>
         <view class="item-info">
           <view class="item-title">{{item.title}}</view>

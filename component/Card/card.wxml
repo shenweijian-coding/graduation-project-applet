@@ -7,11 +7,13 @@
       <image class="avator" mode="widthFix" src="{{item.userInfo.avatarUrl}}"></image>
       <view>
         <view class="flex3">
-          <view>{{item.userInfo.name}}</view>
           <view wx:if="{{item.userInfo.gender}}" class="gender-1 iconfont icon-nv"></view>
           <view wx:else class="gender-0 iconfont icon-nan"></view>
+          <view class="name">{{item.userInfo.name}}</view>
         </view>
-        <view class="time">{{item.createTime}}</view>
+        <view class="time">{{item.createTime}} <text style="margin-left:30rpx">2017级信息工程</text> </view>
+        
+        
       </view>
     </view>
     <view>
@@ -29,9 +31,9 @@
     <view class="line"></view>
     <!-- 评论 -->
     <view class="flex" style="padding:0 40rpx">
-      <button open-type="share" style="margin: 0;padding: 0;background: none;" class="flex"><van-icon size="18" name="share-o"/><view class="bottom-con">转发</view></button>
-      <view data-item="{{item}}" bindtap="navToDetail" class="flex"><van-icon size="18" name="chat-o" /><view class="bottom-con" >{{item.disNum}}</view></view>
-      <view class="flex"><van-icon size="18" name="good-job-o" /><view class="bottom-con">{{item.likeNum}}</view></view>
+      <button open-type="share" style="margin: 0;padding: 0;background: none;" class="flex"><van-icon color="#bfbfbf" size="18" name="share"/><view class="bottom-con">转发</view></button>
+      <view data-item="{{item}}" bindtap="navToDetail" class="flex"><van-icon color="#bfbfbf" size="18" name="chat" /><view class="bottom-con" >{{item.disNum}}</view></view>
+      <view bindtap="clickLike" data-item="{{item}}" class="flex"><van-icon size="18" color="{{item.isLike?'#f45670':'#bfbfbf'}}" name="good-job" /><view class="bottom-con">{{item.likeNum}}</view></view>
     </view>
   </view>
   <view class="item-bottom"></view>

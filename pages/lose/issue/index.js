@@ -1,5 +1,7 @@
 // pages/lose/issue/index.js
 import { request, uploadFile } from '../../../utils/request'
+const app = getApp();
+  
 Page({
 
   /**
@@ -57,9 +59,11 @@ Page({
     },
     // 发布
   async submit(){
+    const domain = app.globalData.domain
     const _this = this.data
-    const img = _this.fileList.map(i=>`http://127.0.0.1:3000/${i.url}`)
+    const img = _this.fileList.map(i=>`${domain}/${i.url}`)
     const reqData = {
+      type: 'lostandfound',
       role: _this.role,
       time: _this.time,
       title: _this.title,

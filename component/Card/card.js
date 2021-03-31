@@ -14,7 +14,6 @@ Component({
    * 组件的初始数据
    */
   data: {
-
   },
 
   /**
@@ -33,6 +32,12 @@ Component({
        desc: '分享页面的内容',
        path: '/page/user?id=123' // 路径，传递参数到指定页面。
       }
+     },
+     // 点赞
+     clickLike(e){
+       console.log(e.currentTarget.dataset.item);
+       const { type, _id } = e.currentTarget.dataset.item
+       this.triggerEvent('clickLike',_id)
      }
   }
 })

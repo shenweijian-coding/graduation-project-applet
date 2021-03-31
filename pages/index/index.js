@@ -57,13 +57,33 @@ Page({
     })
   },
   onLoad() {
-    this.getRecommendInfo()
+    
   },
   async getHomeInfo(){
     const data = await request({
       url: '/api/getHomeInfo'
     })
     this.setData({ banners: data.data.banners, notice:data.data.notice })
+  },
+  // 点赞
+  async clickLike(e){
+    const recommendInfo = this.data.recommendInfo
+    let dbName,isLike
+    let _id = e.detail
+    // 本地点赞+1 -1操作
+    recommendInfo.map(i=>{
+      if(i._id == _id){
+        i.isLike = !i.isLike
+        i.likeNum = i.isLike ? ++i.likeNum : --i.likeNum
+        dbName = i.type
+        isLike = i.isLike
+      }
+    })
+    // 发送请求
+    request({
+      url: `/api/like?isLike=${isLike}&id=${_id}&dbName=${dbName}`
+    })
+    this.setData({ recommendInfo })
   },
   // 获取最近发布的数据
   async getRecommendInfo(){
@@ -82,5 +102,6 @@ Page({
     }
     // 获取首页banner 校园公告信息
     this.getHomeInfo()
+    this.getRecommendInfo()
   }
 })
