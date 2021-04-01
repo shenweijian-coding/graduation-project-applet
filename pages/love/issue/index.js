@@ -36,9 +36,15 @@ Page({
   async submit(){
     const domain = app.globalData.domain
     const data = this.data
+    if(data.desc === ''){
+      wx.showToast({
+        title: '描述不能为空',
+        icon: 'none'
+      })
+    }
     const img = data.fileList.map(i => `${domain}/${i.url}`)
     const reqData = {
-      name:data.name,
+      name:data.name== '' ? '匿名' : data.name,
       desc: data.desc,
       createTime: formatTime(),
       img:img,

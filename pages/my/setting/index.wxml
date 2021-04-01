@@ -6,6 +6,7 @@
     placeholder="请输入姓名"
     data-type="name"
     bind:change="onChange"
+    required
   />
   <van-field
     label="你的学院"
@@ -14,6 +15,7 @@
     placeholder="请输入你的学院"
     data-type="college"
     bind:change="onChange"
+    required
   />
     <van-field
     label="你的专业"
@@ -22,6 +24,7 @@
     placeholder="请输入你的专业"
     data-type="major"
     bind:change="onChange"
+    required
   />
   <van-field
     label="你的年级"
@@ -30,6 +33,7 @@
     placeholder="请输入你的年级(如大二)"
     data-type="grade"
     bind:change="onChange"
+    required
   />
     <van-field
     label="你的邮箱"
@@ -38,13 +42,14 @@
     placeholder="请输入你的邮箱"
     data-type="email"
     bind:change="onChange"
+    required
   />
-  <van-field
+  <!-- <van-field
     label="微信号"
         size="large"
     value="{{ userInfo.wxName }}"
     placeholder="请输入你的微信号"
     data-type="wxName"
     bind:change="onChange"
-  />
+  /> -->
   <button class="submit-btn" bindtap="submitUserInfo">提交信息</button>

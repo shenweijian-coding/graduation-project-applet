@@ -1,5 +1,6 @@
 // pages/my/setting/index.js
 import {request} from '../../../utils/request'
+import { email } from '../../../utils/util'
 const app = getApp()
 const globalData = app.globalData
 Page({
@@ -14,7 +15,7 @@ Page({
       grade:'',
       major: '',
       email: '',
-      wxName: ''
+      // wxName: ''
     },
   },
   // 提交用户信息
@@ -24,9 +25,17 @@ Page({
       if(userInfo[key] === '') {
         wx.showToast({
           title: '请填写完整',
+          icon: 'none'
         })
         return
       }
+    }
+    if(!email(userInfo.email)){
+      wx.showToast({
+        title: '邮箱格式不准确',
+        icon: 'none'
+      })
+      return
     }
     // 加入头像和性别
     userInfo.avatarUrl = globalData.userInfo.avatarUrl

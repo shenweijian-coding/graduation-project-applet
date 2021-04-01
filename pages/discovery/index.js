@@ -151,46 +151,49 @@ Page({
   btnLocation:[
     {
       id:0,
-      name:"东校区东门"
+      name:"北院东校区"
     },{
       id:1,
-      name: '东校区西门'
+      name: '教学楼C区'
     },{
       id:2,
-      name:'男生1号楼'
+      name:'食堂'
     },{
       id:3,
-      name:'女生2号楼'
+      name:'1号楼'
     },{
       id:4,
-      name:'女生3号楼'
+      name:'2号楼'
     },
     {
       id:5,
-      name:'食堂'
+      name:'3号楼'
     },
     {
       id:6,
-      name:'教学楼'
+      name:'校园超市'
     },
     {
       id:7,
-      name:'篮球场'
-    },    {
-      id:7,
-      name:'足球场'
-    },    {
-      id:7,
       name:'锅炉房园通快递'
+    },    {
+      id:8,
+      name:'韵达、零食吧、冷饮店'
+    },    {
+      id:9,
+      name:'申通、中通、理发店'
     },{
-      id:7,
-      name:'申通韵达快递'
+      id:10,
+      name:'东门'
     },{
-      id:7,
-      name:'韵达快递'
+      id:11,
+      name:'西门'
     },{
-      id:7,
-      name:'校园超市'
+      id:12,
+      name:'篮球场'
+    },{
+      id:13,
+      name:'足球场'
     }
   ]
   },

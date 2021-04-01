@@ -61,13 +61,20 @@ Page({
   async submit(){
     const domain = app.globalData.domain
     const _this = this.data
+    if(_this.title=='' ){
+      wx.showToast({
+        title: '标题不能为空',
+        icon: 'none'
+      })
+      return
+    }
     const img = _this.fileList.map(i=>`${domain}/${i.url}`)
     const reqData = {
       type: 'lostandfound',
       role: _this.role,
       time: _this.time,
       title: _this.title,
-      reward: _this.reward,
+      reward: _this.reward == '' ? '0' : _this.reward,
       keyWordList: _this.keyWordList,
       img
     }

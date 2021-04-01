@@ -41,10 +41,17 @@ Page({
   async submit() {
     const domain = app.globalData.domain
     const data = this.data
+    if(data.desc == ''){
+      wx.showToast({
+        title: '请输入介绍',
+        icon: 'none',
+      })
+      return
+    }
     const img = data.fileList.map(i=>`${domain}/${i.url}`)
     const reqData = {
       type: 'trade',
-      price: data.price,
+      price: data.price == '' ? '0' : data.price,
       desc: data.desc,
       isNew: data.checked ? true : false,
       img: img,

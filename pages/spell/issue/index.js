@@ -28,6 +28,14 @@ Page({
   async submit(){
     const domain = app.globalData.domain
     const desc = this.data.desc
+    if(desc===''){
+      wx.showToast({
+        title: '详细信息不能为空',
+        duration: 0,
+        icon: none,
+      })
+      return
+    }
     const img = this.data.fileList.map(i=>`${domain}/${i.url}`)
     const res = await request({
       url: '/api/issueNeedInfo',
