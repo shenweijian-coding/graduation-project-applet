@@ -11,7 +11,7 @@
           <view wx:else class="gender-0 iconfont icon-nan"></view>
           <view class="name">{{item.userInfo.name}}</view>
         </view>
-        <view class="time">{{item.createTime}} <text style="margin-left:30rpx">2017级信息工程</text> </view>
+        <view class="time">{{item.createTime}} <text style="margin-left:30rpx">{{item.userInfo.major}}{{item.userInfo.grade}}</text> </view>
         
         
       </view>

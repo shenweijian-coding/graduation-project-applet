@@ -74,6 +74,7 @@ Page({
       role: _this.role,
       time: _this.time,
       title: _this.title,
+      phone: _this.phone,
       reward: _this.reward == '' ? '0' : _this.reward,
       keyWordList: _this.keyWordList,
       img

@@ -18,11 +18,6 @@ Page({
           url: '../my/setting/index'
         })
       },
-      fail:err=>{
-        wx.showToast({
-          title: err,
-        })
-      }
     })
   },
   /**

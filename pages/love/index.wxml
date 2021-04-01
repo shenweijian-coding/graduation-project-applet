@@ -8,7 +8,7 @@
 
 <view class="item" data-item="{{item}}" bindtap="navToDetail">
   <view class="border-img">
-    <!-- <cover-image  src=""></cover-image> -->
+    <cover-image  src="/images/love.png"></cover-image>
   </view>
 <view class="item-user flex">
 <view class="user-name">{{item.name}}</view>

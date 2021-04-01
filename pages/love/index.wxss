@@ -66,6 +66,5 @@
   top: -50rpx;
 }
 cover-image{
-  height: auto;
-  transform: translateY(-46%);
+  transform: translateY(10%);
 }

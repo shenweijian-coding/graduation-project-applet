@@ -15,6 +15,7 @@
     <view style="color:#8a8a8a;">物品名称：<text style="color:#000;">{{info.title}}</text></view>
     <view style="color:#8a8a8a;">丢失时间：<text style="color:#000;">{{info.time}}</text></view>
     <view style="color:#8a8a8a;">给予酬金：<text style="color:#000;">{{info.reward}}</text></view>
+    <view style="color:#8a8a8a;">联系方式：<text style="color:#000;">{{info.phone}}</text></view>
     <view style="color:#8a8a8a;">关键词描述：<text style="color:#000;">{{info.keyWordList}}</text></view>
   </view>
 <view wx:if="{{!info.img.length}}">
@@ -27,4 +28,4 @@
 </view>
 </view>
   <!-- 立即联系 -->
-  <button>立即联系</button>
+  <!-- <button>立即联系</button> -->

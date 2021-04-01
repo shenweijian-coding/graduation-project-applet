@@ -48,7 +48,10 @@ Page({
       }
     ],
     notice:'',
-    recommendInfo:[]
+    recommendInfo:[],
+    pageSize:0,
+    pageNum:8,
+    isShowEnd: false
   },
   // 跳转对应页面
   getCurPage(e){
@@ -87,10 +90,16 @@ Page({
   },
   // 获取最近发布的数据
   async getRecommendInfo(){
+    const { pageNum,pageSize,recommendInfo } = this.data
     const res = await request({
-      url: '/api/getRecommendInfo'
+      url: `/api/getRecommendInfo?pageSize=${pageSize}&pageNum=${pageNum}`
     })
-    this.setData({recommendInfo:res.data})
+    this.setData({recommendInfo:[ ...recommendInfo,...res.data ]})
+    if(res.data.length) {
+      this.setData({ pageNum: pageNum, pageSize: pageSize + pageNum  })
+    }else{
+      this.setData({ isShowEnd:true })
+    }
     console.log(res);
   },
   onShow() {
@@ -103,5 +112,12 @@ Page({
     // 获取首页banner 校园公告信息
     this.getHomeInfo()
     this.getRecommendInfo()
-  }
+  },
+    /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+    console.log('触底了')
+    this.getRecommendInfo()
+  },
 })

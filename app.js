@@ -1,8 +1,8 @@
 // app.js
 App({
   globalData: {
-    domain: 'http://192.168.0.107:3000',
-    // domain: 'https://yuanxiaoshen.com:3001',
+    // domain: 'http://192.168.0.107:3000',
+    domain: 'https://yuanxiaoshen.com:3001',
     openid: '',
     userInfo: null
   },
