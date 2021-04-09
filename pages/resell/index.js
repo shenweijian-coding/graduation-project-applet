@@ -1,5 +1,6 @@
 // pages/resell/index.js
 import {request} from '../../utils/request'
+const app = getApp()
 Page({
 
   /**
@@ -9,14 +10,15 @@ Page({
     resellInfo:[],
     banners:[
       '../../images/58de59d9e2be4.jpg'
-    ]
+    ],
+    isShowIssue: true
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({ isShowIssue: app.globalData.isShowIssue})
   },
   async clickLike(e){
     const resellInfo = this.data.resellInfo

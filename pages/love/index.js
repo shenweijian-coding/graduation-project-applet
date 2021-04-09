@@ -1,5 +1,6 @@
 // pages/love/index.js
 import { request } from '../../utils/request'
+const app = getApp()
 Page({
 
   /**
@@ -7,6 +8,7 @@ Page({
    */
   data: {
     ani: '',
+    isShowIssue: true,
     loveInfo: []
   },
   // 循环动画
@@ -48,6 +50,7 @@ Page({
    */
   onLoad: function (options) {
     this.start()
+    this.setData({ isShowIssue: app.globalData.isShowIssue})
   },
   // 获取表白信息
   async getLoveInfo(){

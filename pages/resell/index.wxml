@@ -7,4 +7,4 @@
   </swiper>
 </view>
 <my-card data="{{resellInfo}}" bind:clickLike="clickLike"/>
-<my-issue navPath="./issue/index"/>
+<my-issue wx:if="{{isShowIssue}}" navPath="./issue/index"/>

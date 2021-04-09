@@ -1,5 +1,6 @@
 // pages/lose/index.js
 import {request} from '../../utils/request'
+const app = getApp()
 Page({
 
   /**
@@ -8,6 +9,7 @@ Page({
   data: {
     lostInfo:[],
     foundInfo: [],
+    isShowIssue: true,
     banners: ['https://img.zcool.cn/community/01f6725d89119da801211d536e7e81.png@1280w_1l_2o_100sh.png']
   },
   navIssuePage(){
@@ -42,7 +44,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({ isShowIssue: app.globalData.isShowIssue})
   },
 
   /**

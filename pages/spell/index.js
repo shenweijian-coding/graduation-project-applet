@@ -1,19 +1,21 @@
 // pages/spell/index.js
 import {request} from '../../utils/request'
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    helpInfo: []
+    helpInfo: [],
+    isShowIssue: true
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({ isShowIssue: app.globalData.isShowIssue})
   },
   async clickLike(e){
     const helpInfo = this.data.helpInfo

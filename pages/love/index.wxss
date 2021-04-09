@@ -20,14 +20,14 @@
   animation-iteration-count: infinite;
 }
 .top-img image{
-  margin-top: 20%;
+  /* margin-top: 20%; */
   width: 76%;
 }
 .item{
   width: 86%;
   padding: 86rpx 30rpx;
   background-color: #fff;
-  margin: 90rpx auto;
+  margin: 10rpx auto;
   border-radius: 6px;
   position: relative;
 }

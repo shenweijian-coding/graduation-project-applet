@@ -6,7 +6,7 @@
     </swiper-item>
   </swiper>
 </view>
-<my-issue navPath="./issue/index"/>
+<my-issue wx:if="{{isShowIssue}}" navPath="./issue/index"/>
 <van-tabs color="#f45670" bind:change="changeTab">
   <van-tab title="失物" name="1">
     <block wx:for="{{lostInfo}}">

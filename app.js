@@ -1,10 +1,11 @@
 // app.js
 App({
   globalData: {
-    // domain: 'http://192.168.0.107:3000',
+    // domain: 'http://127.0.0.1:3000',
     domain: 'https://yuanxiaoshen.com:3001',
     openid: '',
-    userInfo: null
+    userInfo: null,
+    isShowIssue: true
   },
   onLaunch() {
     console.log('小程序执行');

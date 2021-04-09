@@ -1,8 +1,8 @@
 <view class="bg">
   <van-icon name="arrow-left" bindtap="back" class="back"/>
-  <my-issue navPath="./issue/index"></my-issue>>
+  <my-issue wx:if="{{isShowIssue}}" navPath="./issue/index"></my-issue>>
 <view class="top-img">
-<image mode="widthFix" animation="{{ani}}" src="https://yuanxiaoshen.com:3001/public/font.png"></image>
+<image mode="widthFix" animation="{{ani}}" src="/images/lovebg.png"></image>
 </view>
 <block wx:for="{{loveInfo}}" wx:index="index">
 

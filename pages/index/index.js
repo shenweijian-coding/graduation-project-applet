@@ -66,6 +66,7 @@ Page({
     const data = await request({
       url: '/api/getHomeInfo'
     })
+    app.globalData.isShowIssue = data.data.isShowIssue
     this.setData({ banners: data.data.banners, notice:data.data.notice })
   },
   // 点赞
