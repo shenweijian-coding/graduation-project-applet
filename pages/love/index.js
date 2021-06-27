@@ -9,7 +9,9 @@ Page({
   data: {
     ani: '',
     isShowIssue: true,
-    loveInfo: []
+    loveInfo: [],
+    pageSize: 0,
+    pageNum: 8,
   },
   // 循环动画
   start:function(){
@@ -34,8 +36,8 @@ Page({
   },
   // 返回
   back(){
-    wx.navigateBack({
-      delta: 1,
+    wx.switchTab({
+      url: '/pages/index/index',
     })
   },
   // 详细
@@ -54,11 +56,17 @@ Page({
   },
   // 获取表白信息
   async getLoveInfo(){
+    const { pageNum, pageSize, loveInfo } = this.data
     const data = await request({
-      url: '/api/getLoveInfo'
+      url: `/api/getLoveInfo?pageSize=${pageSize}&pageNum=${pageNum}`
     })
-    const loveInfo = data.data.reverse()
-    this.setData({ loveInfo: loveInfo  })
+    const result = data.data
+    this.setData({ loveInfo: [...loveInfo, ...result]  })
+    if(data.data.length) {
+      this.setData({ pageNum: pageNum, pageSize: pageSize + pageNum  })
+    }else{
+      this.setData({ isShowEnd:true })
+    }
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -100,7 +108,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    this.getLoveInfo()
   },
 
   /**

@@ -1,6 +1,10 @@
-<map name="" scale="18" markers="{{markers}}" class="school" id="schoolMap" longitude="{{longitude}}" latitude="{{latitude}}"></map>
+<van-empty image="error" wx:if="{{isStop}}" description="小程序维护，无法使用" />
+
+<view wx:else>
+  <map name="" scale="18" markers="{{markers}}" class="school" id="schoolMap" longitude="{{longitude}}" latitude="{{latitude}}"></map>
 <view class="option">
 <block wx:for="{{btnLocation}}" wx:key="index">
   <button class="btn" bindtap="changeLocation" data-id="{{item.id}}">{{item.name}}</button>
 </block>
+</view>
 </view>

@@ -11,6 +11,10 @@ Component({
     path:{
       type:String,
       value:''
+    },
+    isShowDelete:{
+      type: Boolean,
+      value: true
     }
   },
 

@@ -16,6 +16,7 @@ Page({
   getDesc(e){
     this.setData({ desc:e.detail.value })
   },
+  
   // 上传图片
   async afterRead(event){
     const { file } = event.detail;
@@ -49,15 +50,16 @@ Page({
         likeNum:0
       }
     })
-    wx.showToast({
-      title: res.message,
-      success:()=>{
-        wx.navigateBack({
-          delta: 1,
-        })
-      }
-    })
-    console.log(res);
+    if(res.erron === 0){
+      wx.navigateTo({
+        url: '../../releasesuccess/index?path=spell',
+      })
+    }else{
+      wx.showToast({
+        title: '出现错误',
+        icon: 'none'
+      })
+    }
   },
   /**
    * 生命周期函数--监听页面加载

@@ -1,4 +1,5 @@
 {
   "usingComponents": {},
-  "navigationBarTitleText":"校园通讯录"
+  "navigationBarTitleText":"校园通讯录",
+  "navigationStyle":"custom"
 }

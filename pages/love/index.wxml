@@ -25,4 +25,5 @@
 </view>
 
 </block>
+<view class="end" wx:if="{{isShowEnd}}">我也是有底线的</view>
 </view>

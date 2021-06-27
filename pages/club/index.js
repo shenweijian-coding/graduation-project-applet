@@ -1,5 +1,5 @@
 // pages/club/index.js
-import {request} from '../../utils/request'
+import { request } from '../../utils/request'
 Page({
 
   /**
@@ -11,7 +11,10 @@ Page({
     clubListB: [],
     clubListC: [],
     clubListD: [],
+    keyword: '',
+    searchInfo: null
   },
+  timer: '',
   // tab切换
   changeClubType(e) {
     this.setData({ active: e.detail.name})
@@ -25,6 +28,44 @@ Page({
     console.log(e);
     wx.navigateTo({
       url: './detail/index?detailInfo=' + JSON.stringify(e.currentTarget.dataset.item),
+    })
+  },
+  onChange(e) {
+    this.setData({
+      keyword: e.detail,
+    });
+  },
+  // 搜索
+  async searchClub(){
+    const { keyword } = this.data
+    if(keyword.length===0){
+      this.setData({
+        searchInfo: null
+      })
+      return
+    }
+    const res = await request({ url: `/api/getClubInfo?keyword=${keyword}` })
+    console.log(res.data);
+    const clubArr = res.data
+    if(clubArr.length === 0){
+      wx.showToast({
+        title: '未找到任何数据',
+        icon: 'none'
+      })
+      return
+    }
+    const clubMap = new Map([
+      ['A','文艺类'],
+      ['B','学术科技类'],
+      ['C','体育类'],
+      ['D','志愿公益类']
+    ])
+    for (let i = 0; i < clubArr.length; i++) {
+      clubArr[i].type = clubMap.get(clubArr[i].type)
+    }
+    this.setData({
+      searchInfo: clubArr,
+      keyword: ''
     })
   },
   /**

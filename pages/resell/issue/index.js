@@ -16,6 +16,8 @@ Page({
     price:'',
     type: ''
   },
+
+  
   onChange(e){
     this.setData({checked:e.detail})
   },
@@ -64,15 +66,16 @@ Page({
       method: 'POST',
       data: reqData
     })
-    wx.showToast({
-      title: res.message,
-      icon: 'none',
-      success:()=>{
-        wx.navigateBack({
-          delta: 1,
-        })
-      }
-    })
+    if(res.erron === 0){
+      wx.navigateTo({
+        url: '../../releasesuccess/index?path=resell',
+      })
+    }else{
+      wx.showToast({
+        title: '出现错误',
+        icon: 'none'
+      })
+    }
   },
   /**
    * 生命周期函数--监听页面加载

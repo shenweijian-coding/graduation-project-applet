@@ -1,4 +1,5 @@
 {
   "usingComponents": {},
-  "navigationBarTitleText":"发现北院"
+  "navigationBarTitleText":"发现北院",
+  "navigationStyle":"custom"
 }

@@ -1,0 +1,6 @@
+<view class="pad bg">
+  <view class="box" wx:for="{{3}}">
+    <view>您的帖子收到评论，点击查看</view>
+    <view>帖子内容</view>
+  </view>
+</view>

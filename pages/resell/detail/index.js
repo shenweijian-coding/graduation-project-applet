@@ -64,7 +64,7 @@ Page({
       return
     }
     // 反转数组
-    const commentList = res.data.commentList.reverse()
+    const commentList = res.data.commentList
     this.setData({ commentList })
   },
 

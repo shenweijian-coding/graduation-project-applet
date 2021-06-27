@@ -1,4 +1,5 @@
   <!-- banner区域 -->
+  <van-icon name="arrow-left" bindtap="back" class="back"/>
   <view class="swiper-container">
   <swiper class="swiper1" indicator-dots="true" indicator-active-color="#fff" autoplay circular>
     <swiper-item wx:for="{{banners}}" wx:key="id">
@@ -8,3 +9,4 @@
 </view>
 <my-card data="{{resellInfo}}" bind:clickLike="clickLike"/>
 <my-issue wx:if="{{isShowIssue}}" navPath="./issue/index"/>
+<view class="end" wx:if="{{isShowEnd}}">我也是有底线的</view>

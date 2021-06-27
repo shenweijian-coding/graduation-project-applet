@@ -81,6 +81,18 @@
         {
           "name": "物品详情",
           "pathName": "pages/resell/detail/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "成功发布",
+          "pathName": "pages/releasesuccess/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "通知",
+          "pathName": "pages/my/info/index",
           "scene": null
         }
       ]

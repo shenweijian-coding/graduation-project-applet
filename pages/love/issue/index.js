@@ -44,6 +44,7 @@ Page({
     }
     const img = data.fileList.map(i => `${domain}/${i.url}`)
     const reqData = {
+      type: 'love',
       name:data.name== '' ? '匿名' : data.name,
       desc: data.desc,
       createTime: formatTime(),
@@ -56,15 +57,16 @@ Page({
       method: 'POST',
       data: reqData
     })
-    console.log(res);
-    wx.showToast({
-      title: res.message,
-      success: ()=>{
-        wx.navigateBack({
-          delta: 1,
-        })
-      }
-    })
+    if(res.erron === 0){
+      wx.navigateTo({
+        url: '../../releasesuccess/index?path=love',
+      })
+    }else{
+      wx.showToast({
+        title: '出现错误',
+        icon: 'none'
+      })
+    }
   },
   /**
    * 生命周期函数--监听页面加载

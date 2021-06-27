@@ -6,6 +6,9 @@
     <view>来源：教务处</view>
   </view>
 </view>
+<view>
+  {{curInfo.desc}}
+</view>
   <block wx:for="{{detail}}">
   <view>{{item}}</view>
 </block>

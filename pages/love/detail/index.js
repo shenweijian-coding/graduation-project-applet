@@ -27,7 +27,7 @@ Page({
   async submit(){
     const userInfo = globalData.userInfo
     const desc = this.data.comment
-    const id = this.data.curLoveInfo._id
+    const {_id, type} = this.data.curLoveInfo
     const avatarUrl = userInfo.avatarUrl
     const name = userInfo.nickName
     const createTime = formatTime()
@@ -35,8 +35,8 @@ Page({
       url: '/api/issueComment',
       method: 'POST',
       data: {
-        type:3,
-        id,
+        dbName: type,
+        id: _id,
         commentInfo:{
           desc,avatarUrl,name,createTime
         }
@@ -59,7 +59,7 @@ Page({
       return
     }
     // 反转数组
-    const commentList = res.data.commentList.reverse()
+    const commentList = res.data.commentList
     this.setData({ commentList })
   },
   /**

@@ -20,3 +20,5 @@
 <!-- <van-field size="large" value="{{ type }}" placeholder="请输入价格" label="分类" border="{{ true }}" bind:change="onChange"
   input-align="right" /> -->
   <button bindtap="submit">确认发布</button>
+
+  <van-dialog id="van-dialog" />

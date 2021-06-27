@@ -9,9 +9,12 @@ Page({
   data: {
     resellInfo:[],
     banners:[
-      '../../images/58de59d9e2be4.jpg'
+      '/images/fleafair.png'
     ],
-    isShowIssue: true
+    isShowIssue: true,
+    isShowEnd: false,
+    pageSize: 0,
+    pageNum: 8
   },
 
   /**
@@ -40,14 +43,27 @@ Page({
     this.setData({ resellInfo })
   },
   async getResellInfo(){
+    const { pageNum, pageSize, resellInfo } = this.data
     const res = await request({
-      url:'/api/getResellInfo'
+      url:`/api/getResellInfo?pageSize=${pageSize}&pageNum=${pageNum}`
     })
-    const resellInfo = res.data.reverse()
-    this.setData({
-      resellInfo
-    })
+    const result = res.data
+    this.setData({ resellInfo:[...resellInfo,...result] })
+    if(res.data.length) {
+      this.setData({ pageNum: pageNum, pageSize: pageSize + pageNum  })
+    }else{
+      this.setData({ isShowEnd:true })
+    }
   },
+    // 返回
+    back(){
+      // wx.navigateBack({
+      //   delta: 1,
+      // })
+      wx.switchTab({
+        url: '/pages/index/index',
+      })
+    },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -88,6 +104,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
+    this.getResellInfo()
 
   },
 

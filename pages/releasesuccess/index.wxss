@@ -1,0 +1,18 @@
+/* pages/releasesuccess/index.wxss */
+.con{
+  margin: 20rpx auto;
+  text-align: center;
+}
+.success{
+  font-size: 44rpx;
+  margin: 20rpx 0;
+}
+.tips{
+  margin: 20rpx 0 60rpx 0;
+  color: #333;
+}
+.flex{
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+}

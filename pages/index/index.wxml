@@ -1,4 +1,5 @@
-<view class="container">
+<van-empty image="error" wx:if="{{isStop}}"  description="小程序维护，无法使用" />
+<view class="container" wx:else>
   <!-- banner区域 -->
 <view class="swiper-container">
   <swiper class="swiper1" indicator-dots="true" indicator-active-color="#fff" autoplay circular>

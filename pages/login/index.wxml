@@ -1,5 +1,7 @@
 <view class="flex">
-  <image mode="widthFix" src="https://wx.qlogo.cn/mmhead/Q3auHgzwzM50NwdS4a0OaQpw42e7U44h0jdg6KVWrCJiamzicDwKCicrA/0"></image>
+  <image mode="widthFix" src="https://wx.qlogo.cn/mmhead/Q3auHgzwzM50NwdS4a0OaQpw42e7U44hFhVu2fcwzBTLd7B0swvI0g/0"></image>
   <view>北院校园通</view>
-  <button style="background:#f45670;" open-type="getUserInfo" bindtap="login" type="primary">微信授权登录</button>
+  <button wx:if="{{canIUseGetUserProfile}}" style="background:#f45670;" type="primary" bindtap="getUserProfile">获取头像昵称</button>
+  <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称2</button>
+  <!-- <button style="background:#f45670;" open-type="getUserInfo" bindgetuserinfo="login" type="primary">微信授权登录</button> -->
 </view>

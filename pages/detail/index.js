@@ -21,18 +21,23 @@ Page({
   async submit(){
     const userInfo = globalData.userInfo
     const desc = this.data.comment
-    const id = this.data.curTradeInfo._id
+    if(desc.length === 0){
+      wx.showToast({
+        title: '请输入评论内容',
+      })
+      return
+    }
+    const { _id,type } = this.data.curTradeInfo
     const avatarUrl = userInfo.avatarUrl
     const gender = userInfo.gender
     const name = userInfo.nickName
     const createTime = formatTime()
-    console.log(globalData);
     const res = await request({
       url: '/api/issueComment',
       method: 'POST',
       data: {
-        type: 1,
-        id,
+        dbName: type,
+        id: _id,
         commentInfo:{
           desc,avatarUrl,gender,name,createTime
         }
@@ -64,7 +69,7 @@ Page({
       return
     }
     // 反转数组
-    const commentList = res.data.commentList.reverse()
+    const commentList = res.data.commentList
     this.setData({ commentList })
   },
 

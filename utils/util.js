@@ -22,7 +22,37 @@ const email = v =>{
     return false
   }
 }
+
+function debounce(func, wait) {
+  let timeout;
+  return function () {
+      let context = this;
+      let args = arguments;
+
+      if (timeout) clearTimeout(timeout);
+      
+      timeout = setTimeout(() => {
+          func.apply(context, args)
+      }, wait);
+  }
+}
+function wxAppStop(){
+  wx.showModal({
+    title: '提示',
+    content: '小程序维护中无法使用',
+    showCancel: false,
+    success (res) {
+      if (res.confirm) {
+        console.log('用户点击确定')
+      } else if (res.cancel) {
+        console.log('用户点击取消')
+      }
+    }
+  })
+}
 module.exports = {
   formatTime,
-  email
+  email,
+  debounce,
+  wxAppStop
 }

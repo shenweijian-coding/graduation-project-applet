@@ -1,13 +1,16 @@
 <view class="container-address">
-
-
-<view class="search">
+  <van-icon name="arrow-left" bindtap="back" class="back"/>
+  <view class="top-img">
+<image mode="" animation="{{ani}}" src="/images/addressbg.png"></image>
+</view>
+<!-- <view class="search">
   <van-search
-  value="{{  }}"
+  value="{{ addressKeyword }}"
   shape="round"
   placeholder="请输入搜索关键词"
+  
 />
-</view>
+</view> -->
 <!-- 左右栏 -->
 <view class="flex list-con">
   <!-- 左边栏 -->

@@ -1,11 +1,13 @@
 // app.js
 App({
   globalData: {
-    // domain: 'http://127.0.0.1:3000',
+    // domain: 'http://127.0.0.1:3001',
     domain: 'https://yuanxiaoshen.com:3001',
     openid: '',
     userInfo: null,
-    isShowIssue: true
+    userInfo2: null,
+    isShowIssue: true,
+    isStop: false
   },
   onLaunch() {
     console.log('小程序执行');
@@ -26,6 +28,8 @@ App({
         // 没有需要去登录获取
         // 临时登录凭证code只能使用一次
         // 调用login时 会更新session_key，使原来的失效
+      },
+      complete(){
         wx.login({
           success(response) {
             console.log('login success', response);

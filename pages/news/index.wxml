@@ -5,7 +5,7 @@
   <swiper class="swiper1">
     <swiper-item>
       <a href="">
-        <image mode="aspectFill" src="{{recNews.imgUrl}}"></image>
+        <image mode="aspectFill"  src="{{recNews.imgUrl}}" data-item="{{recNews}}" bindtap="navDetail"></image>
       </a>
     </swiper-item>
   </swiper>

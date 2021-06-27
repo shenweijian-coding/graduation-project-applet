@@ -1,2 +1,3 @@
 <my-issue  wx:if="{{isShowIssue}}" navPath="./issue/index"/>
 <my-card data="{{helpInfo}}" bind:clickLike="clickLike"/>
+<view class="end" wx:if="{{isShowEnd}}">我也是有底线的</view>

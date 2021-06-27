@@ -5,6 +5,24 @@
   top: 0;
   bottom: 0;
 }
+.back{
+  color: #fff;
+  font-size: 38rpx;
+  position: fixed;
+  z-index: 10;
+  top: 7%;
+  left: 6%;
+}
+.top-img{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-iteration-count: infinite;
+}
+.top-img image{
+  width: 100%;
+}
 .search{
   position: fixed;
   top: 0;
@@ -13,16 +31,16 @@
   border-bottom: 18rpx solid #f7f7f7f7;
 }
 .active{
-  color: #f45670;
+  color: #4181e3;
   background-color: #f7f7f7f7;
 }
 .left, .right{
-  height: 92vh;
+  height: 1100rpx;
   widows: 100%;
 }
 .list-con{
   position: relative;
-  margin-top: 122rpx;
+  margin-top: 20rpx;
 }
 .left{
   background-color: #fff;
@@ -53,10 +71,21 @@ background-color: #f7f7f7f7;
   padding: 10rpx 30rpx;
   background-color: #fff;
   margin-bottom: 24rpx;
+  position: relative;
 }
 .right-item-title{
   padding: 20rpx 30rpx;
   border-bottom: 1px solid #f7f7f7f7;
+}
+.right-item-title::before{
+  content: '';
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 50%;
+  background: #4181e3;
+  position: absolute;
+  top: 40rpx;
+  left: 32rpx;
 }
 .phone-item{
   font-size: 28rpx;

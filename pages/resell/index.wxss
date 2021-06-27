@@ -1,15 +1,29 @@
 /* pages/resell/index.wxss */
+.back{
+  color: #fff;
+  font-size: 38rpx;
+  position: fixed;
+  z-index: 10;
+  top: 7%;
+  left: 6%;
+}
 .swiper-container {
   width: 750rpx;
-  height: 375rpx;
+  height: 484rpx;
   position: relative;
   z-index: 1;
 }
 .swiper-container .swiper1 {
   width: 750rpx;
-  height: 375rpx;
+  height: 484rpx;
 }
 .swiper-container .swiper1 image {
   width: 750rpx;
-  height: 375rpx;
+  height: 790rpx;
+}
+.end{
+  color: #7a7a7a;
+  font-size: 26rpx;
+  margin: 20rpx;
+  text-align: center;
 }

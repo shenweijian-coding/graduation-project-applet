@@ -8,6 +8,8 @@
     "pages/my/issue/index",
     "pages/my/about/index",
     "pages/my/like/index",
+    "pages/my/info/index",
+    "pages/my/webview/index",
     "pages/news/index",
     "pages/news/detail/index",
     "pages/addresslist/index",
@@ -24,7 +26,8 @@
     "pages/love/index",
     "pages/love/issue/index",
     "pages/love/detail/index",
-    "pages/login/index"
+    "pages/login/index",
+    "pages/releasesuccess/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -72,6 +75,7 @@
     "van-radio-group": "@vant/weapp/radio-group/index",
     "van-uploader": "@vant/weapp/uploader/index",
     "van-switch": "@vant/weapp/switch/index",
+    "van-dialog": "@vant/weapp/dialog/index",
     "van-empty": "@vant/weapp/empty/index",
     "my-card":"./component/Card/card",
     "my-issue": "./component/Issue/issue",

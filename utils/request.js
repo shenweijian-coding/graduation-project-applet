@@ -1,5 +1,8 @@
 
 function request({ url, method, data }){
+  wx.showLoading({
+    title: '请求中...',
+  })
   const app = getApp()
   const domain = app.globalData.domain
   let openid = app.globalData.openid
@@ -15,11 +18,19 @@ function request({ url, method, data }){
         Cookie:openid
       },
       success: res=>resolve(res.data),
-      fail: reject
+      fail: reject,
+      complete:()=>{
+        wx.hideLoading({
+          success: (res) => {},
+        })
+      }
     })
   })
 }
 function uploadFile({ url }){
+  wx.showLoading({
+    title: '上传中...',
+  })
   const app = getApp()
   const domain = app.globalData.domain
   let openid = app.globalData.openid
@@ -35,7 +46,12 @@ function uploadFile({ url }){
         Cookie:openid
       },
       success:res=>resolve(res.data),
-      fail:reject
+      fail:reject,
+      complete:()=>{
+        wx.hideLoading({
+          success: (res) => {},
+        })
+      }
     })
   })
 }

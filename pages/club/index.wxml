@@ -1,12 +1,14 @@
-<van-search value="{{ value }}" placeholder="请输入搜索关键词" />
-<van-tabs active="{{ active }}" bind:change="changeClubType">
+<van-search value="{{ keyword }}" use-action-slot bind:change="onChange" placeholder="请输入搜索关键词">
+  <view slot="action" bind:tap="searchClub">搜索</view>
+</van-search>
+<van-tabs active="{{ active }}" bind:change="changeClubType" wx:if="{{!searchInfo}}">
   <van-tab name="A" title="文艺类">
    <view class="bg">
     <view class="club-item flex" wx:for="{{clubListA}}" wx:key="index" data-item="{{item}}" bindtap="navToetail">
         <image mode="widthFix" src="{{item.clubLogo}}"></image>
       <view class="right-text">
         <view class="club-name">{{item.title}}</view>
-        <view class="club-info">简介{{item.desc}}</view>
+        <view class="club-info">简介：{{item.desc}}</view>
         <view class="club-tag">
           <view wx:for="{{item.tag}}" wx:key="index" class="tag-item">{{item}}</view>
         </view>
@@ -20,7 +22,7 @@
         <image mode="widthFix" src="{{item.clubLogo}}"></image>
       <view class="right-text">
         <view class="club-name">{{item.title}}</view>
-        <view class="club-info">简介{{item.desc}}</view>
+        <view class="club-info">简介：{{item.desc}}</view>
         <view class="club-tag">
           <view wx:for="{{item.tag}}" wx:key="index" class="tag-item">{{item}}</view>
         </view>
@@ -34,7 +36,7 @@
         <image mode="widthFix" src="{{item.clubLogo}}"></image>
       <view class="right-text">
         <view class="club-name">{{item.title}}</view>
-        <view class="club-info">简介{{item.desc}}</view>
+        <view class="club-info">简介：{{item.desc}}</view>
         <view class="club-tag">
           <view wx:for="{{item.tag}}" wx:key="index" class="tag-item">{{item}}</view>
         </view>
@@ -48,7 +50,7 @@
         <image mode="widthFix" src="{{item.clubLogo}}"></image>
       <view class="right-text">
         <view class="club-name">{{item.title}}</view>
-        <view class="club-info">简介{{item.desc}}</view>
+        <view class="club-info">简介：{{item.desc}}</view>
         <view class="club-tag">
           <view wx:for="{{item.tag}}" wx:key="index" class="tag-item">{{item}}</view>
         </view>
@@ -57,3 +59,17 @@
    </view>
   </van-tab>
 </van-tabs>
+
+<!-- //  搜索查询 -->
+<view class="bg" wx:else>
+    <view class="club-item flex" wx:for="{{searchInfo}}" wx:key="index" data-item="{{item}}" bindtap="navToetail">
+        <image mode="widthFix" src="{{item.clubLogo}}"></image>
+      <view class="right-text">
+        <view class="club-name">{{item.title}}-<text style="color:#f45670">{{item.type}}</text> </view>
+        <view class="club-info">简介：{{item.desc}}</view>
+        <view class="club-tag">
+          <view wx:for="{{item.tag}}" wx:key="index" class="tag-item">{{item}}</view>
+        </view>
+      </view>
+    </view>
+   </view>

@@ -1,5 +1,6 @@
 // pages/lose/issue/index.js
 import { request, uploadFile } from '../../../utils/request'
+import { formatTime } from '../../../utils/util'
 const app = getApp();
   
 Page({
@@ -73,10 +74,11 @@ Page({
       type: 'lostandfound',
       role: _this.role,
       time: _this.time,
-      title: _this.title,
+      desc: _this.title,
       phone: _this.phone,
       reward: _this.reward == '' ? '0' : _this.reward,
       keyWordList: _this.keyWordList,
+      createTime: formatTime(),
       img
     }
     const res = await request({
@@ -84,15 +86,16 @@ Page({
       method: 'POST',
       data: reqData
     })
-    wx.showToast({
-      title: res.message,
-      success:()=>{
-        wx.navigateBack({
-          delta: 1,
-        })
-      }
-    })
-    console.log(res);
+    if(res.erron === 0){
+      wx.navigateTo({
+        url: '../../releasesuccess/index?path=lose',
+      })
+    }else{
+      wx.showToast({
+        title: '出现错误',
+        icon: 'none'
+      })
+    }
   },
   /**
    * 生命周期函数--监听页面加载

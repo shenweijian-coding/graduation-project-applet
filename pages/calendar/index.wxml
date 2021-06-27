@@ -1,4 +1,4 @@
 <view class="img-con">
   <image mode="widthFix" src="http://www1.hebeinu.edu.cn/xl1.jpg"></image>
-<image mode="widthFix" src="http://www1.hebeinu.edu.cn/xl2.jpg"></image>
+  <image mode="widthFix" src="http://www1.hebeinu.edu.cn/xl2.jpg"></image>
 </view>

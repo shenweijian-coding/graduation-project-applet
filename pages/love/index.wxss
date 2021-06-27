@@ -4,6 +4,12 @@
   background-color: #000;
   padding: 20rpx 0;
 }
+.end{
+  color: #fff;
+  font-size: 26rpx;
+  margin: 20rpx;
+  text-align: center;
+}
 .back{
   color: #fff;
   font-size: 38rpx;
@@ -27,7 +33,7 @@
   width: 86%;
   padding: 86rpx 30rpx;
   background-color: #fff;
-  margin: 10rpx auto;
+  margin: 30rpx auto;
   border-radius: 6px;
   position: relative;
 }

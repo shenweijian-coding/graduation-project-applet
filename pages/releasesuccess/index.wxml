@@ -1,0 +1,7 @@
+<view class="con">
+<view><image src="/images/success.svg"></image></view>
+<view class="success">发布成功!</view>
+<view class="tips">帖子将由管理员审核通过后发布</view>
+<button style="width:90%;background-color:#f45670;color:#fff;" bindtap="continueIssue">继续发布</button>
+<button style="width:90%;margin-top:30rpx;" bindtap="back">返回</button>
+</view>

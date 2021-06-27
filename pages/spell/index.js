@@ -8,7 +8,10 @@ Page({
    */
   data: {
     helpInfo: [],
-    isShowIssue: true
+    isShowIssue: true,
+    pageSize: 0,
+    pageNum: 8,
+    isShowEnd: false
   },
 
   /**
@@ -37,12 +40,17 @@ Page({
     this.setData({ helpInfo })
   },
   async getHelpInfo(){
+    const { pageNum, pageSize, helpInfo } = this.data
     const data = await request({
-      url: '/api/getHelpInfo'
+      url: `/api/getHelpInfo?pageSize=${pageSize}&pageNum=${pageNum}`
     })
-    console.log(data);
-    const helpInfo = data.data.reverse()
-    this.setData({ helpInfo: helpInfo })
+    const result = data.data
+    this.setData({ helpInfo: [...helpInfo, ...result ] })
+    if(data.data.length) {
+      this.setData({ pageNum: pageNum, pageSize: pageSize + pageNum  })
+    }else{
+      this.setData({ isShowEnd:true })
+    }
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -83,7 +91,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    this.getHelpInfo()
   },
 
   /**

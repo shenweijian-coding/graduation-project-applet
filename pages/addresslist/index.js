@@ -12,7 +12,8 @@ Page({
   data: {
     curSelect: 0,
     selectId: 'item0',
-    addressList: []
+    addressList: [],
+    addressKeyword: ''
   },
 
   /**
@@ -21,6 +22,12 @@ Page({
   onLoad: function (options) {
     this.getAddressInfo()
   },
+    // 返回
+    back(){
+      wx.navigateBack({
+        delta: 1,
+      })
+    },
   // 获取通讯录列表
   async getAddressInfo(){
     const res = await request({

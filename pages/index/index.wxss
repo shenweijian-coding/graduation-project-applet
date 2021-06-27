@@ -114,3 +114,8 @@
   font-size: 26rpx;
   margin-bottom: 20rpx;
 }
+.stop{
+  width: 100vw;
+  height: 100vh;
+  
+}

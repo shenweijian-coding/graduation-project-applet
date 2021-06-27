@@ -1,1 +1,1 @@
-<my-show data="{{likeList}}" path="/pages/detail/index"/>
+<my-show data="{{likeList}}" path="/pages/detail/index" isShowDelete="{{false}}"/>

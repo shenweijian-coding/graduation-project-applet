@@ -1,4 +1,5 @@
 {
   "usingComponents": {},
-  "navigationBarTitleText":"二手交易"
+  "navigationBarTitleText":"二手交易",
+  "navigationStyle":"custom"
 }

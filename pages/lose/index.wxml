@@ -1,11 +1,11 @@
   <!-- banner区域 -->
-  <view class="swiper-container">
+  <!-- <view class="swiper-container">
   <swiper class="swiper1" indicator-dots="true" indicator-active-color="#fff" autoplay circular>
     <swiper-item wx:for="{{banners}}" wx:key="id">
       <image mode="aspectFill" src="{{item}}" />
     </swiper-item>
   </swiper>
-</view>
+</view> -->
 <my-issue wx:if="{{isShowIssue}}" navPath="./issue/index"/>
 <van-tabs color="#f45670" bind:change="changeTab">
   <van-tab title="失物" name="1">
@@ -13,7 +13,7 @@
       <view class="item-con flex" data-item="{{item}}" bindtap="navDeatil">
         <view class="item-img">
           <image wx:if="{{item.img[0]}}" mode="widthFix" src="{{item.img[0]}}"></image>
-          <image wx:else mode="widthFix" src="/images//no.png"></image>
+          <image wx:else mode="widthFix" src="/images/no.png"></image>
         </view>
         <view class="item-info">
           <view class="item-title">{{item.title}}</view>

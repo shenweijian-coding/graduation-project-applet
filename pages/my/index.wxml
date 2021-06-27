@@ -1,20 +1,27 @@
+<van-empty image="error" wx:if="{{isStop}}" description="小程序维护，无法使用" />
+<view wx:else>
 <!-- 头像区域 -->
 <view class="my-user-info flex">
 <view class="flex" wx:if="{{avatarUrl}}">
-  <image src="https://img.zcool.cn/community/0193f25f7d886011013e4584a64c96.jpg" mode="" alt="" />
-  <view>申伟建</view>
+  <image src="{{avatarUrl}}" mode="" alt="" />
+  <view>{{name}}</view>
 </view>
-<button wx:else bindtap="getUserInfo" open-type="getUserInfo">登录</button>
+<button wx:else bindgetuserinfo="getUserInfo" open-type="getUserInfo">登录</button>
 </view>
 <!-- 菜单区 -->
 <van-cell-group>
   <van-cell icon="setting-o" title="信息设置"  link-type="navigateTo" url="./setting/index" size="large" is-link arrow/>
 </van-cell-group>
 <van-cell-group>
+  <!-- <van-cell title="消息通知" icon="chat-o" size="large" url="./info/index" is-link arrow/> -->
   <van-cell title="我发布的" icon="add-o" size="large" url="./issue/index" is-link arrow/>
   <van-cell title="我点赞的" icon="good-job-o" size="large" url="./like/index" is-link arrow/>
 </van-cell-group>
 <view class="cut-off"></view>
 <van-cell-group>
+  <van-cell title="订阅评论通知" icon="bullhorn-o" size="large" bindtap="submit" arrow/>
+</van-cell-group>
+<van-cell-group>
   <van-cell title="关于" icon="warning-o" size="large" url="./about/index" is-link arrow/>
 </van-cell-group>
+</view>

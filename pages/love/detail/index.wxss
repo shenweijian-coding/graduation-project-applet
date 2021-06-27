@@ -3,7 +3,7 @@
   height: 600rpx;
   position: relative;
   z-index: 1;
-  margin-top: 24%;
+  /* margin-top: 24%; */
 }
 .swiper-container .swiper1 {
   width: 750rpx;

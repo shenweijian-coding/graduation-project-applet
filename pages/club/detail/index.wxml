@@ -1,8 +1,10 @@
 <!-- 图片区域 -->
 <view class="swiper-container">
+  <van-icon name="arrow-left" bindtap="back" class="back"/>
   <!-- <swiper class="swiper1" indicator-dots="true" indicator-active-color="#fff" autoplay circular>
     <swiper-item wx:for="{{clubInfo}}" wx:key="id"> -->
       <image mode="aspectFill" src="{{clubInfo.mainImg}}" />
+      <!-- <cover-image mode="aspectFill" src="{{clubInfo.mainImg}}"></cover-image> -->
     <!-- </swiper-item>
   </swiper> -->
 </view>
@@ -13,7 +15,7 @@
   <!-- 左边 -->
   <view class="club-main">
     <view class="club-name">{{clubInfo.title}}</view>
-    <view class="club-mem">成员 101</view>
+    <!-- <view class="club-mem">成员 101</view> -->
     <view class="club-tag flex">
       <view class="tag-item" wx:for="{{clubInfo.tag}}" wx:key="index">{{item}}</view>
     </view>
